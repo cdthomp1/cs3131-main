@@ -1,38 +1,34 @@
-<?php
-
-$name = htmlspecialchars($_POST["name"]);
-$email = htmlspecialchars($_POST["email"]);
-$major = htmlspecialchars($_POST["major"]);
-$places = $_POST["places"];
-$comments = htmlspecialchars($_POST["comments"]);
-
-?>
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+
 <head>
-	<title>Submission Results</title>
+  <title>Teach 03 | CS313 PHP forms - Return input</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta charset="utf-8">
+
+
 </head>
 
 <body>
-	<h1>Submission Results</h1>
+  Name: <?php echo $_POST["name"]; ?><br>
+  Email: <?php echo $_POST["email"]; ?><br>
+  Major: <?php echo $_POST["major"]; ?><br>
+  Comments:<br>
+  <?php echo $_POST["comments"]; ?><br>
+  Continents visited:<br>
+  <?php
+    $continent=$_POST["continent"];
+    $N = count($continent);
 
-	<p>Your name is: <?=$name ?></p>
-	<p>Your email is: <a href="mailto:<?=$email ?>"><?=$email ?></a></p>
-	<p>Your major is: <?=$major ?></p>
-	<p>You have been to the following places:</p>
-	<ul>
-
-<?
-foreach ($places as $place)
-{
-	$place_clean = htmlspecialchars($place);
-	echo "<li><p>$place_clean</p></li>";
-}
-?>		
-
-	</ul>
-
-	<p>Comments: <?=$comments?></p>
+    $continent_map = array("na"=>"North America", "sa"=>"South America", "eu"=>"Europe", "as"=>"Asia",
+      "au"=>"Australia", "af"=>"Africa", "an"=>"Antarctica");
+    
+    for($i=0; $i < $N; $i++)
+    {
+      echo($continent_map[$continent[$i]] . "<br>");
+    }
+  ?>
+  <br>
 
 </body>
 
