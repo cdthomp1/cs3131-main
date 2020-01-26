@@ -1,7 +1,7 @@
 .productContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -16,17 +16,20 @@
     width: 50%;
     height: 50%;
     object-fit: cover;
-  }
+}
 
 
-  @font-face {
+@font-face {
     font-family: Chicago;
     src: url('https://dl.dropbox.com/s/ueoh9twyvz4bwkr/ChicagoFLF.ttf?dl=0');
 }
-body, html {
+
+body,
+html {
     height: 100%;
     background-color: #62639b;
 }
+
 .mos9 {
     height: 100%;
     display: flex;
@@ -35,6 +38,7 @@ body, html {
     font-family: Chicago, sans-serif;
     font-size: 15px;
 }
+
 .mos9-window {
     display: flex;
     flex-direction: column;
@@ -48,46 +52,58 @@ body, html {
     border-right: solid 1px #b5b5b5;
     border-bottom: solid 1px #b5b5b5;
 }
+
 .mos9-window .mos9-window__header {
     display: flex;
     justify-content: space-between;
 }
+
 .mos9-window .mos9-window__header .mos9-window__title {
     flex: 1;
     display: flex;
     padding: 2px;
 }
-.mos9-window .mos9-window__header .mos9-window__title:before, .mos9-window .mos9-window__header .mos9-window__title:after {
+
+.mos9-window .mos9-window__header .mos9-window__title:before,
+.mos9-window .mos9-window__header .mos9-window__title:after {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAAGUlEQVQYV2P8////fwY0wFhcXIwpOERUAgBPkx+vDNl9TQAAAABJRU5ErkJggg==');
     content: '';
     flex: 1;
 }
+
 .mos9-window .mos9-window__header .mos9-window__title:before {
     margin-right: 10px;
 }
+
 .mos9-window .mos9-window__header .mos9-window__title:after {
     margin-left: 10px;
 }
+
 .mos9-window .mos9-window__header .mos9-window__tools {
     display: flex;
     padding: 2px;
 }
-.mos9-window .mos9-window__header .mos9-window__tools .mos9-window__tool--1:after, .mos9-window .mos9-window__header .mos9-window__tools .mos9-window__tool--2:after {
+
+.mos9-window .mos9-window__header .mos9-window__tools .mos9-window__tool--1:after,
+.mos9-window .mos9-window__header .mos9-window__tools .mos9-window__tool--2:after {
     content: '';
     display: block;
     border-bottom: solid 1px #000;
 }
+
 .mos9-window .mos9-window__header .mos9-window__tools .mos9-window__tool--1:after {
     width: 5px;
     height: 5px;
     border-right: solid 1px #000;
 }
+
 .mos9-window .mos9-window__header .mos9-window__tools .mos9-window__tool--2:after {
     width: 100%;
     height: 1px;
     margin-top: 3px;
     border-top: solid 1px #000;
 }
+
 .mos9-window .mos9-window__content {
     display: flex;
     flex: 1;
@@ -100,8 +116,12 @@ body, html {
     border-right: solid 1px #fff;
     border-bottom: solid 1px #fff;
 }
-.mos9-window__content button {
-    align-items: flex-end;
+
+.mos9-window__content-control {
+    display: flex;
+    flex: 1;
+    margin: 0 2px 2px;
+    padding: 10px;
 }
 
 .mos9-button {

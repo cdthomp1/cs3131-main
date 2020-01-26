@@ -25,15 +25,17 @@ $productArray = $product->getAllProduct();
                         <div class="mos9-window__content">
                             <img src="<?php echo $productArray[$k]["image"]; ?>">
                             <p><?php echo "$" . $productArray[$k]["price"]; ?></p>
-                            <button type="button" id="add_<?php echo $productArray[$k]["code"]; ?>" class="btnAddAction cart-action" onClick="cartAction('add','<?php echo $productArray[$k]["code"]; ?>')">
-                                <img src="images/add-to-cart.png" />
-                            </button>
-                            <input type="text" id="qty_<?php echo $productArray[$k]["code"]; ?>" name="quantity" value="1" size="2" />
+                            <div class="mos9-window__content-control">
+                                <button type="button" id="add_<?php echo $productArray[$k]["code"]; ?>" class="btnAddAction cart-action" onClick="cartAction('add','<?php echo $productArray[$k]["code"]; ?>')">
+                                    <img src="images/add-to-cart.png" />
+                                </button>
+                                <input type="text" id="qty_<?php echo $productArray[$k]["code"]; ?>" name="quantity" value="1" size="2" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <?php
+    <?php
         }
     }
     ?>
