@@ -202,3 +202,8 @@ h2 {
     margin-top: 50px;
     margin-bottom: 20px;
 }
+
+.the-cart-table {
+    width: 450px;
+    text-align: center;
+}
