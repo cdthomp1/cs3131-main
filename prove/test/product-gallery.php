@@ -26,8 +26,8 @@ $productArray = $product->getAllProduct();
 
                 </form>
             </div>
-</div>
-<?php
+    <?php
         }
     }
-?>
+    ?>
+</div>
