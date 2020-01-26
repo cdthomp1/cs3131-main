@@ -6,4 +6,4 @@
         ?>
     </div>
 </div>
-<script src="./home/prove/test/cartAction.js"></script>
+<script src="cartAction.js"></script>
