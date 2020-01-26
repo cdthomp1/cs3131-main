@@ -15,7 +15,7 @@ function cartAction(action, product_code) {
         }
     }
     jQuery.ajax({
-        url: "ajax-action.php",
+        url: "cart-action.php",
         data: queryString,
         type: "POST",
         success: function(data) {

@@ -24,6 +24,27 @@ class Product
             'code' => 'powermacg3',
             'image' => 'product-images/powermac-g3.jpg',
             'price' => '250.00'
+        ),
+        "powermacg3logicboard" => array(
+            'id' => '3',
+            'name' => 'Power Mac G3 Logic Board',
+            'code' => 'powermacg3logicboard',
+            'image' => 'product-images/powermac-g3-logic-board.jpg',
+            'price' => '40.00'
+        ),
+        "1984keyboard" => array(
+            'id' => '3',
+            'name' => '1984 Macintosh Keyboard',
+            'code' => '1984keyboard',
+            'image' => 'product-images/macintosh-keyboard.jpg.jpg',
+            'price' => '35.00'
+        ),
+        "imacg3cd" => array(
+            'id' => '3',
+            'name' => 'iMac G3 CD Drive',
+            'code' => 'imacg3cd',
+            'image' => 'product-images/imac-g3-cd.jpg',
+            'price' => '20.00'
         )
     );
 

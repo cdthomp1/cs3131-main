@@ -5,7 +5,7 @@
     </div>
     <div id="cart-item">
         <?php
-        require_once "ajax-action.php";
+        require_once "cart-action.php";
         ?>
     </div>
 </div>
