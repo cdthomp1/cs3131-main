@@ -16,6 +16,10 @@ html {
     font-family: Chicago;
     src: url('https://dl.dropbox.com/s/ueoh9twyvz4bwkr/ChicagoFLF.ttf?dl=0');
 }
+.product{
+    flex: 1;
+    display: block;
+}
 
 .mos9 {
     flex: 1;
