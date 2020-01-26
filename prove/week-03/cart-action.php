@@ -59,7 +59,7 @@ if (isset($_SESSION["cart_item"])) {
 				</div>
 			</div>
 			<div class="mos9-window__content">
-				<table>
+				<table class="the-cart-table">
 					<tbody>
 						<tr>
 							<th><strong>Name</strong></th>
