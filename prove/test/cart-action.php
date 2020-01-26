@@ -76,7 +76,7 @@ if (isset($_SESSION["cart_item"])) {
 								<td><?php echo $item["code"]; ?></td>
 								<td><?php echo $item["quantity"]; ?></td>
 								<td><?php echo "$" . $item["price"]; ?></td>
-								<td><a onClick="cartAction('remove','<?php echo $item["code"]; ?>')" class="btnRemoveAction cart-action"><img src="images/icon-delete.png" /></a></td>
+								<td><a onClick="cartAction('remove','<?php echo $item["code"]; ?>')" class="btnRemoveAction cart-action">X</a></td>
 							</tr>
 						<?php
 							$item_total += ($item["price"] * $item["quantity"]);
