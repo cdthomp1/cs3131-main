@@ -107,6 +107,7 @@ html {
 .mos9-window .mos9-window__content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex: 1;
     margin: 0 2px 2px;
     padding: 10px;
