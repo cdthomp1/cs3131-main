@@ -93,6 +93,8 @@ if (isset($_SESSION["cart_item"])) {
 			</div>
 		</div>
 	</div>
+	<a id="btnEmpty" class="cart-action" onClick="cartAction('empty','');"><img src="images/icon-empty.png" /> Empty Cart</a>
 <?php
 }
 ?>
+
