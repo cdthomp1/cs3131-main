@@ -39,6 +39,26 @@ session_start();
     ?>
     <div class="clear-float"></div>
     <a href="cart.php">Cart</a>
+
+    <div class="mos9">
+        <div class="mos9-window">
+            <div class="mos9-window__header">
+                <div class="mos9-window__tools">
+                    <a href="#" class="mos9-window__close mos9-button"></a>
+                </div>
+                <div class="mos9-window__title">Mac OS</div>
+                <div class="mos9-window__tools">
+                    <a href="#" class="mos9-window__tool--1 mos9-button"></a>
+                    <a href="#" class="mos9-window__tool--2 mos9-button"></a>
+                </div>
+            </div>
+            <div class="mos9-window__content">
+                <p>
+                    Goin' oldschool...
+                </p>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="cartAction.js"></script>
 </body>
