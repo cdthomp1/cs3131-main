@@ -36,7 +36,7 @@ class Product
             'id' => '3',
             'name' => '1984 Macintosh Keyboard',
             'code' => '1984keyboard',
-            'image' => 'product-images/1984-macintosh-keyboard.jpg.jpg',
+            'image' => 'product-images/macintosh-keyboard.jpg',
             'price' => '35.00'
         ),
         "imacg3cd" => array(
