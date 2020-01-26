@@ -197,7 +197,8 @@ h2 {
 
 }
 
-.shopping-cart {
+
+#shopping-cart, .shopping-cart {
     margin-top: 50px;
     margin-bottom: 20px;
 }
