@@ -16,14 +16,6 @@ session_start();
     ?>
     <div class="clear-float"></div>
     <a href="cart.php">Cart</a>
-   <!--  <div id="shopping-cart">
-        <div class="txt-heading">Shopping Cart <a id="btnEmpty" class="cart-action" onClick="cartAction('empty','');"><img src="images/icon-empty.png" /> Empty Cart</a></div>
-        <div id="cart-item">
-            <?php
-            require_once "ajax-action.php";
-            ?>
-        </div>
-    </div> -->
     <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
     <script>
         function cartAction(action, product_code) {
