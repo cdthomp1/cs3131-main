@@ -19,7 +19,8 @@ html {
 }
 
 .mos9 {
-    height: 100%;
+    width: 300px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
