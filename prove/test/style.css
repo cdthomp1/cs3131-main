@@ -5,18 +5,6 @@
     flex-wrap: wrap;
 }
 
-.product {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.product img {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-}
 
 
 @font-face {
@@ -117,6 +105,12 @@ html {
     border-left: solid 1px #b5b5b5;
     border-right: solid 1px #fff;
     border-bottom: solid 1px #fff;
+}
+
+.mos9-window .mos9-window__content img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
 }
 
 .mos9-window__content-control {
