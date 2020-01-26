@@ -95,6 +95,30 @@ if (isset($_SESSION["cart_item"])) {
 	</div>
 	<a id="btnEmpty" class="cart-action" onClick="cartAction('empty','');"><img src="images/icon-empty.png" /> Empty Cart</a>
 <?php
+} else {
+	?>
+
+<div class="mos9">
+  <div class="mos9-window">
+    <div class="mos9-window__header">
+      <div class="mos9-window__tools">
+        <a href="#" class="mos9-window__close mos9-button"></a>
+      </div>
+      <div class="mos9-window__title">Shopping Cart</div>
+      <div class="mos9-window__tools">
+        <a href="#" class="mos9-window__tool--1 mos9-button"></a>
+        <a href="#" class="mos9-window__tool--2 mos9-button"></a>
+      </div>
+    </div>
+    <div class="mos9-window__content">
+      <p>
+        You need to add some items to your cart.
+      </p>
+    </div>
+  </div>
+</div>
+
+	<?php
 }
 ?>
 
