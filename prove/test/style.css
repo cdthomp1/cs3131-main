@@ -80,3 +80,9 @@ body {
     background-color: #ffffff;
     padding: 5px;
 }
+
+.product img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+  }

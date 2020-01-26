@@ -3,7 +3,7 @@ require_once ("Product.php");
 $product = new Product();
 $productArray = $product->getAllProduct();
 ?>
-<div id="product-grid">
+<div id="product">
     <div class="txt-heading">Products</div>
 <?php
 if (! empty($productArray)) {
