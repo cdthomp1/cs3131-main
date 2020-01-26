@@ -4,7 +4,6 @@ $product = new Product();
 $productArray = $product->getAllProduct();
 ?>
 
-<div class="txt-heading">Products</div>
 <div class="productContainer">
     <?php
     if (!empty($productArray)) {
