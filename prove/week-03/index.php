@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,55 +31,17 @@
 
 <body>
     <header>
-        <h1>Welcome to Retro Mac!</h1>
+        <h1>Welcome to Retro Mac</h1>
         <h2>Supplier for Retro Macintosh Computers and Parts</h2>
-        <div id="card"><a href="cart.html">Cart</a></div>
     </header>
+    <?php
+    require_once "product-gallery.php";
+    ?>
+    <div class="clear-float"></div>
+    <div class="cart"><a href="cart.php">Cart</a></div>
 
-    <div class="productContainer">
-        <div class="product">
-            <p>iMac G3</p>
-            <img src="https://i.ebayimg.com/images/g/c28AAOSwyRBdje-L/s-l1600.png">
-            <p>$ 200.00 USD</p>
-            <button>Add To Cart</button>
-        </div>
-        <div class="product">
-            <p>1984 Macintosh</p>
-            <img src="https://images.macrumors.com/article-new/2019/01/macintosh-1984-200x200.jpg">
-            <p>$300.00 USD</p>
-            <button>Add To Cart</button>
-        </div>
-        <div class="product">
-            <p>Power Mac G3</p>
-            <img
-                src="https://ebth-com-production.imgix.net/2018/06/04/10/03/20/fdc62bbb-5145-4a4f-be9d-0da7610a81f9/kjnakxjn.jpg?ixlib=rb-3.1.0&w=880&h=880&fit=crop&crop=&auto=format">
-            <p>$250.00 USD</p>
-            <button>Add To Cart</button>
-        </div>
-        <div class="product">
-            <p>Power Mac G3 Logic Board</p>
-            <img src="https://i.ebayimg.com/images/g/yUYAAOSwgeBaWqKV/s-l1600.jpg">
-            <p>$40.00 USD</p>
-            <button>Add To Cart</button>
-        </div>
-
-        <div class="product">
-            <p>1984 Macintosh Keyboard</p>
-            <img src="https://i.ebayimg.com/images/g/RucAAOSwxM1dHP~o/s-l1600.jpg">
-            <p>$35.00 USD</p>
-            <button>Add To Cart</button>
-        </div>
-
-        <div class="product">
-            <p>iMac G3 CD Drive</p>
-            <img src="https://i.ebayimg.com/images/g/LegAAOSwBVpdU~C-/s-l640.jpg">
-            <p>$20.00 USD</p>
-            <button>Add To Cart</button>
-        </div>
-
-    </div>
-
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="cartAction.js"></script>
 </body>
 
 </html>
