@@ -197,6 +197,9 @@ h2 {
 
 }
 
+#shopping-cart{
+    width: 700px;
+}
 
 #shopping-cart, .shopping-cart {
     margin-top: 50px;
