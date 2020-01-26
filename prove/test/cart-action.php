@@ -46,7 +46,7 @@ if (!empty($_POST["action"])) {
 if (isset($_SESSION["cart_item"])) {
 	$item_total = 0;
 ?>
-	<div class="mos9">
+	<div class="mos9 shopping-cart">
 		<div class="mos9-window">
 			<div class="mos9-window__header">
 				<div class="mos9-window__tools">
