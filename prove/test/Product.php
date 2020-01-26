@@ -4,26 +4,26 @@ class Product
 {
 
     public $productArray = array(
-        "3DcAM01" => array(
+        "imacg3" => array(
             'id' => '1',
-            'name' => '3D Camera',
-            'code' => '3DcAM01',
-            'image' => 'product-images/camera.jpg',
-            'price' => '1500.00'
+            'name' => 'iMac G3',
+            'code' => 'imacg3',
+            'image' => 'product-images/imac-g3.png',
+            'price' => '200.00'
         ),
-        "USB02" => array(
+        "1984macintosh" => array(
             'id' => '2',
-            'name' => 'External Hard Drive',
-            'code' => 'USB02',
-            'image' => 'product-images/external-hard-drive.jpg',
-            'price' => '800.00'
-        ),
-        "wristWear03" => array(
-            'id' => '3',
-            'name' => 'Wrist Watch',
-            'code' => 'wristWear03',
-            'image' => 'product-images/watch.jpg',
+            'name' => '1984 Macintosh',
+            'code' => '1984macintosh',
+            'image' => 'product-images/macintosh-1984-200x200.jpg',
             'price' => '300.00'
+        ),
+        "powermacg3" => array(
+            'id' => '3',
+            'name' => 'Power Mac G3',
+            'code' => 'powermacg3',
+            'image' => 'product-images/powermac-g3.jpg',
+            'price' => '250.00'
         )
     );
 

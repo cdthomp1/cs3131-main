@@ -1,5 +1,8 @@
 <div id="shopping-cart">
-    <div class="txt-heading">Shopping Cart <a id="btnEmpty" class="cart-action" onClick="cartAction('empty','');"><img src="images/icon-empty.png" /> Empty Cart</a></div>
+    <div class="txt-heading">
+        <h1>Shopping Cart</h1>
+        <a id="btnEmpty" class="cart-action" onClick="cartAction('empty','');"><img src="images/icon-empty.png" /> Empty Cart</a>
+    </div>
     <div id="cart-item">
         <?php
         require_once "ajax-action.php";
