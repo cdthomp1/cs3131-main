@@ -36,14 +36,15 @@ body {
     padding:8px;
 }
 
-.product-image {
-    height: 100px;
-    width: 150px;
+.product-images {
     background-color: #FFF;
     text-align: center;
     border: #e8e7e7 1px solid;
 }
 
+.product-image {
+    width: 150px;
+ }
 .product-info {
     margin: 10px 0px;
 }
