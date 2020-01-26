@@ -31,14 +31,14 @@ session_start();
 
 <body>
     <header>
-        <h1>Welcome to Retro Mac!</h1>
+        <h1>Welcome to Retro Mac</h1>
         <h2>Supplier for Retro Macintosh Computers and Parts</h2>
     </header>
     <?php
     require_once "product-gallery.php";
     ?>
     <div class="clear-float"></div>
-    <a href="cart.php">Cart</a>
+    <div class="fab"><a href="cart.php">Cart</a></div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="cartAction.js"></script>
