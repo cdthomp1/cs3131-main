@@ -197,16 +197,12 @@ h2 {
 
 }
 
-#shopping-cart{
-    width: 700px;
-}
-
 #shopping-cart, .shopping-cart {
     margin-top: 50px;
     margin-bottom: 20px;
 }
 
 .the-cart-table {
-    width: 450px;
+    width: 100%;
     text-align: center;
 }
