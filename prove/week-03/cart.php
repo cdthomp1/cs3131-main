@@ -27,7 +27,7 @@
 </head>
 
 <div id="shopping-cart">
-
+    <div id="cart-item">
         <?php
         require_once "cart-action.php";
         ?>
