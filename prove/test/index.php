@@ -2,46 +2,58 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
-<!--     <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="f./favicons/avicon-16x16.png">
-    <link rel="manifest" href="./favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff"> -->
-    <title>Retro Mac</title>
+<html lang="en"><head>
+<TITLE>PHP Shopping Cart without Database</TITLE>
+<link href="style.css" type="text/css" rel="stylesheet" />
 </head>
-
 <body>
-    <header>
-        <h1>Welcome to Retro Mac</h1>
-        <h2>Supplier for Retro Macintosh Computers and Parts</h2>
-    </header>
-    <?php
-    require_once "product-gallery.php";
-    ?>
-    <div class="clear-float"></div>
-    <div class="cart"><a href="cart.php">Cart</a></div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="cartAction.js"></script>
+<h1>Demo Shopping Cart without Database</h1>
+<?php 
+require_once "product-gallery.php";
+?>
+<div class="clear-float"></div>
+<div id="shopping-cart">
+<div class="txt-heading">Shopping Cart <a id="btnEmpty" class="cart-action" onClick="cartAction('empty','');"><img src="images/icon-empty.png" /> Empty Cart</a></div>
+<div id="cart-item">
+<?php 
+require_once "ajax-action.php";
+?>
+</div>
+</div>
+<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+<script>
+function cartAction(action, product_code) {
+    var queryString = "";
+    if (action != "") {
+        switch (action) {
+        case "add":
+            queryString = 'action=' + action + '&code=' + product_code
+                    + '&quantity=' + $("#qty_" + product_code).val();
+            break;
+        case "remove":
+            queryString = 'action=' + action + '&code=' + product_code;
+            break;
+        case "empty":
+            queryString = 'action=' + action;
+            break;
+        }
+    }
+    jQuery.ajax({
+        url : "ajax-action.php",
+        data : queryString,
+        type : "POST",
+        success : function(data) {
+            $("#cart-item").html(data);
+            if (action == "add") {
+                $("#add_" + product_code + " img").attr("src",
+                        "images/icon-check.png");
+                $("#add_" + product_code).attr("onclick", "");
+            }
+        },
+        error : function() {
+        }
+    });
+}
+</script>
 </body>
-
 </html>
