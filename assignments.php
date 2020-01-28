@@ -16,14 +16,31 @@
 
 <body>
     <div id="particles-js"></div>
-    <div id="content">        
+    <div id="content">
         <header>
             <a href="index.php"><img src="Dev.png" /></a>
             <h1>Cameron Thompson</h1>
             <h2>Student | Student Software Developer | Thinker</h2>
         </header>
         <article>
-            <p>Assingments Coming Soon!</p>
+            <div id="assignments-container">
+                <div id="prove">
+                    <h2>Prove Assignments</h2>
+                    <div id="prove-assignments-container">
+                        <div class="assignment">
+                            <h3><a href="http://stark-island-81932.herokuapp.com/prove/week-01/index.html" target="_blank">Week 01 Assignment: Hello World</a></h3>
+                            <h3><a href="http://stark-island-81932.herokuapp.com/" target="_blank">Week 02 Assignment: Home Page</a></h3>
+                            <h3><a href="http://stark-island-81932.herokuapp.com/prove/week-03" target="_blank">Week 03 Assignment: Shopping Cart</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div id="team-activities">
+                    <h2>Team Activities</h2>
+                    <div id="team-activites-container">
+
+                    </div>
+                </div>
+            </div>
         </article>
         <?php include './footer.php' ?>
     </div>
