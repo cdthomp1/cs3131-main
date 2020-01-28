@@ -3,12 +3,16 @@ function cartAction(action, product_code) {
     if (action != "") {
         switch (action) {
             case "add":
+                console.log(queryString)
                 queryString = 'action=' + action + '&code=' + product_code +
                     '&quantity=' + $("#qty_" + product_code).val();
+                    console.log(queryString)
                 break;
             case "remove":
                 console.log("CLICK REMOVE")
+                console.log(queryString)
                 queryString = 'action=' + action + '&code=' + product_code;
+                console.log(queryString)
                 break;
             case "empty":
                 queryString = 'action=' + action;
