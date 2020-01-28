@@ -7,6 +7,7 @@ function cartAction(action, product_code) {
                     '&quantity=' + $("#qty_" + product_code).val();
                 break;
             case "remove":
+                console.log("CLICK REMOVE")
                 queryString = 'action=' + action + '&code=' + product_code;
                 break;
             case "empty":
