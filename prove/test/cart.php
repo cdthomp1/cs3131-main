@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +6,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
-<!--     <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
+   <!--  <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-icon-76x76.png">
@@ -29,19 +26,19 @@ session_start();
     <title>Retro Mac</title>
 </head>
 
-<body>
-    <header>
-        <h1>Welcome to Retro Mac</h1>
-        <h2>Supplier for Retro Macintosh Computers and Parts</h2>
-    </header>
-    <?php
-    require_once "product-gallery.php";
-    ?>
-    <div class="clear-float"></div>
-    <div class="cart"><a href="cart.php">Cart</a></div>
+<div id="shopping-cart">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="cartAction.js"></script>
+        <?php
+        require_once "cart-action.php";
+        ?>
+    </div>
+</div>
+<div class="back"><a href="index.php"><- Back</a></div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script src="cartAction.js"></script>
+
 </body>
 
 </html>
