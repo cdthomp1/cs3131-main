@@ -37,7 +37,8 @@
                 <div id="team-activities">
                     <h2>Team Activities</h2>
                     <div id="team-activites-container">
-
+                        <h3><a href="http://stark-island-81932.herokuapp.com/team-activities/week-02/index.html" target="_blank">Week 02 Team Activity</a></h3>
+                        <h3><a href="http://stark-island-81932.herokuapp.com/team-activities/week-03/" target="_blank">Week 03 Team Activity</a></h3>
                     </div>
                 </div>
             </div>
