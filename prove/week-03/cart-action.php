@@ -46,7 +46,7 @@ if (!empty($_POST["action"])) {
 if (isset($_SESSION["cart_item"])) {
 	$item_total = 0;
 ?>
-	<div class="mos9 shopping-cart">
+	<div class="mos9">
 		<div class="mos9-window">
 			<div class="mos9-window__header">
 				<div class="mos9-window__tools">
@@ -76,7 +76,7 @@ if (isset($_SESSION["cart_item"])) {
 								<td><?php echo $item["code"]; ?></td>
 								<td><?php echo $item["quantity"]; ?></td>
 								<td><?php echo "$" . $item["price"]; ?></td>
-								<td><a onClick="cartAction('remove','<?php echo $item["code"]; ?>')" class="btnRemoveAction cart-action">X</a></td>
+								<td><a onClick="cartAction('remove','<?php echo $item["code"]; ?>')" class="btnRemoveAction cart-action"><img src="images/icon-delete.png" /></a></td>
 							</tr>
 						<?php
 							$item_total += ($item["price"] * $item["quantity"]);
@@ -93,33 +93,7 @@ if (isset($_SESSION["cart_item"])) {
 			</div>
 		</div>
 	</div>
-	<div>
-		<a id="btnEmpty" class="cart-action" onClick="cartAction('empty','');"><img src="images/icon-empty.png" /> Empty Cart</a>
-	</div>
+	<a id="btnEmpty" class="cart-action" onClick="cartAction('empty','');"><img src="images/icon-empty.png" /> Empty Cart</a>
 <?php
-} else {
-	?>
-
-<div class="mos9">
-  <div class="mos9-window">
-    <div class="mos9-window__header">
-      <div class="mos9-window__tools">
-        <a href="#" class="mos9-window__close mos9-button"></a>
-      </div>
-      <div class="mos9-window__title">Shopping Cart</div>
-      <div class="mos9-window__tools">
-        <a href="#" class="mos9-window__tool--1 mos9-button"></a>
-        <a href="#" class="mos9-window__tool--2 mos9-button"></a>
-      </div>
-    </div>
-    <div class="mos9-window__content">
-      <p>
-        You need to add some items to your cart.
-      </p>
-    </div>
-  </div>
-</div>
-
-	<?php
 }
 ?>
