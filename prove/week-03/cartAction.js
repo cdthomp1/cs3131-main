@@ -26,6 +26,6 @@ function cartAction(action, product_code) {
                 $("#add_" + product_code).attr("onclick", "");
             }
         },
-        error: function() {}
+        error: function() { alert("THERE WAS AN ERROR PROCESSING YOUR REQUEST");}
     });
 }
