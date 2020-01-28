@@ -31,7 +31,7 @@
         <?php
         require_once "cart-action.php";
         ?>
-
+    </div>
 </div>
 <div class="back"><a href="index.php"><- Back</a></div>
 
