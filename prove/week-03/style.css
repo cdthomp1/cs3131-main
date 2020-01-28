@@ -201,3 +201,8 @@ h2 {
     margin-top: 50px;
     margin-bottom: 20px;
 }
+
+table.the-cart-table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
