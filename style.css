@@ -24,7 +24,7 @@ body {
     padding: 0;
   }
 
-h2 {
+  header h2 {
     color: white;
     font-size: 30px;
     font-weight: bold;
@@ -33,13 +33,8 @@ h2 {
     padding: 0;
   }
 
-  h3 {
+  h2, h3 a {
     color: white;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: Varela Round,sans-serif;
-    margin: 0;
-    padding: 0;
   }
 header img {
   width: 9%;
