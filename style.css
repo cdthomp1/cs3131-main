@@ -190,3 +190,9 @@ input[type="url"],
 select {
   height: 2.75em;
 }
+
+#assignments-container {
+  display: flex;
+  justify-content: flex-start;
+  justify-content: space-evenly;
+}
