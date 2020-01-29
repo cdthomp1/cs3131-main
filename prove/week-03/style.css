@@ -177,7 +177,7 @@ h2 {
     color: black;
 }
 
-.back {
+.back, .checkout {
     border: solid 1px #000;
     box-shadow: inset 1px 1px #cecece, inset -1px -1px #8c8c8c, 1px 1px #fff, -1px -1px #8c8c8c;
     background-color: rgba(156, 156, 156, 1);
