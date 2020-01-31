@@ -40,13 +40,13 @@ session_start();
                             <input type="text" id="state" name="state" placeholder="NY">
                             <label for="zip">Zip</label>
                             <input type="text" id="zip" name="zip" placeholder="10001">
-                            <div class="checkout btn"><button href="confirm.php" method="post">Place Order!</button></div>
+                            <button type='submit' name='psubmit' value='SUBMIT'>Add Address</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="checkout btn"><a href="confirm.php">Place Order!</a></div>
         <div id="cart-item">
             <?php
             require_once "cart-action.php";
@@ -58,8 +58,7 @@ session_start();
     ?>
     <?php
     $name = $_SESSION['fname'];
-
-
+    echo "fname:" . $name;
     ?>
 
 </body>
