@@ -36,7 +36,7 @@
     </div>
 </div>
 <div class="back"><a href="index.php">
-        <- Back</a> </div> <div class="checkout"><a href="checkout.php">Checkout!</a></div>
+        <- Back</a> </div> <div class="checkout-btn"><a href="checkout.php">Checkout!</a></div>
 <?php
 require_once "scripts.php";
 ?>
