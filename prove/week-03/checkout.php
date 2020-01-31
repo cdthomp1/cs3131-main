@@ -50,7 +50,9 @@ session_start();
         require_once "cart-action.php";
         ?>
     </div>
-
+    <?php
+    require_once "scripts.php";
+    ?>
 
 
 </body>
