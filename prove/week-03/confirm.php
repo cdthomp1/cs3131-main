@@ -1,6 +1,6 @@
 <?php
 session_start();
-$name = $_SESSION['fname'];
+$_SESSION['fname'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,7 +31,7 @@ $name = $_SESSION['fname'];
                         <h3>Order Placed!</h3>
                         <p>Order will be shiped to: </p>
                         <?php
-                        echo "fname:" . $name;
+                        echo $_SESSION['fname'];
                         ?>
                         <h4>Order Contents:</h4>
                         <?php
