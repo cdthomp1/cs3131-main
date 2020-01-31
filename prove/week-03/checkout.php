@@ -40,6 +40,7 @@ session_start();
                             <input type="text" id="state" name="state" placeholder="NY">
                             <label for="zip">Zip</label>
                             <input type="text" id="zip" name="zip" placeholder="10001">
+                            <button>Checkout</button>
                         </div>
                     </div>
                 </div>
