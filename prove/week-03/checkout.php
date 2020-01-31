@@ -12,7 +12,7 @@ session_start();
 </head>
 
 <body>
-
+<div class="content">
     <div class="mos9">
         <div class="mos9-window">
             <div class="mos9-window__header">
@@ -26,21 +26,18 @@ session_start();
                 </div>
             </div>
             <div class="mos9-window__content">
-                <form action="confirm.php">
-                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="John M. Doe"><br />
-                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                    <input type="text" id="email" name="email" placeholder="john@example.com"><br />
-                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                    <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"><br />
-                    <label for="city"><i class="fa fa-institution"></i> City</label>
-                    <input type="text" id="city" name="city" placeholder="New York"><br />
-                    <label for="state">State</label>
-                    <input type="text" id="state" name="state" placeholder="NY"><br />
-                    <label for="zip">Zip</label>
-                    <input type="text" id="zip" name="zip" placeholder="10001"><br />
-                    <input type="submit" value="Continue to checkout" class="btn">
-                </form>
+                <label for="fname"><i class="fa fa-user"></i> Full Name</label><br />
+                <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                <label for="email"><i class="fa fa-envelope"></i> Email</label><br />
+                <input type="text" id="email" name="email" placeholder="john@example.com">
+                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label><br />
+                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                <label for="city"><i class="fa fa-institution"></i> City</label><br />
+                <input type="text" id="city" name="city" placeholder="New York">
+                <label for="state">State</label><br />
+                <input type="text" id="state" name="state" placeholder="NY">
+                <label for="zip">Zip</label><br />
+                <input type="text" id="zip" name="zip" placeholder="10001">
             </div>
         </div>
     </div>
@@ -50,6 +47,7 @@ session_start();
         require_once "cart-action.php";
         ?>
     </div>
+</div>
     <?php
     require_once "scripts.php";
     ?>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,18 +26,20 @@
     <title>Retro Mac</title>
 </head>
 
-<div id="shopping-cart">
-    <div id="cart-item">
-        <?php
-        require_once "cart-action.php";
-        ?>
+<div class="content">
+    <div id="shopping-cart">
+        <div id="cart-item">
+            <?php
+            require_once "cart-action.php";
+            ?>
+        </div>
     </div>
 </div>
-<div class="back"><a href="index.php"><- Back</a></div>
-<div class="checkout"><a href="checkout.php">Checkout!</a></div>
+<div class="back"><a href="index.php">
+        <- Back</a> </div> <div class="checkout"><a href="checkout.php">Checkout!</a></div>
 <?php
-    require_once "scripts.php";
-    ?>
+require_once "scripts.php";
+?>
 
 </body>
 

@@ -17,7 +17,7 @@ h2 {
     src: url('https://dl.dropbox.com/s/ueoh9twyvz4bwkr/ChicagoFLF.ttf?dl=0');
 }
 
-.productContainer {
+.content {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

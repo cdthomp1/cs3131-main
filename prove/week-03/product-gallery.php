@@ -4,7 +4,7 @@ $product = new Product();
 $productArray = $product->getAllProduct();
 ?>
 
-<div class="productContainer">
+<div class="content">
     <?php
     if (!empty($productArray)) {
         foreach ($productArray as $k => $v) {
