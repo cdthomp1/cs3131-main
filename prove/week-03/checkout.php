@@ -12,7 +12,7 @@ session_start();
 </head>
 
 <body>
-<div class="content">
+<div class="content checkout">
     <div class="mos9">
         <div class="mos9-window">
             <div class="mos9-window__header">
