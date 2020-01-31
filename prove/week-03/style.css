@@ -221,5 +221,6 @@ h2 {
 }
 
 #checkout-form{
-    display: felx;
+    display: flex;
+    flex-direction: column;
 }
