@@ -34,5 +34,5 @@ CREATE TABLE appointment (
     appointment_vehicle_id integer NOT NULL REFERENCES vehicle (vehicle_id),
     appointment_customer_id integer NOT NULL REFERENCES customer (customer_id),
     appointment_remind_next_apt DATE NOT NULL DEFAULT CURRENT_DATE,
-    appointment_working-tech-id integer NOT NULL REFERENCES technician (technician_id)
+    appointment_working_tech_id integer NOT NULL REFERENCES technician (technician_id)
 );
