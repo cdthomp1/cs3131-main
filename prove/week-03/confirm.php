@@ -32,7 +32,7 @@ $_SESSION['fname'];
                         <p>Order will be shiped to: </p>
                         <?php
                         //echo $_SESSION['fname'];
-                        print_r($_SESSION);
+                        print_r($_POST);
                         ?>
                         <h4>Order Contents:</h4>
                         <?php
