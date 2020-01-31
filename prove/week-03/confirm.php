@@ -30,7 +30,7 @@ session_start();
                         <h3>Order Placed!</h3>
                         <p>Order will be shiped to: </p>
                         <?php
-                        require_once "customer.php";
+                        echo "fname:" . $name;
                         ?>
                         <h4>Order Contents:</h4>
                         <?php

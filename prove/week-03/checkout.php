@@ -40,6 +40,7 @@ session_start();
                             <input type="text" id="state" name="state" placeholder="NY">
                             <label for="zip">Zip</label>
                             <input type="text" id="zip" name="zip" placeholder="10001">
+                            <div class="checkout btn"><button href="confirm.php" method="post">Place Order!</button></div>
                         </div>
                     </div>
                 </div>
@@ -52,11 +53,14 @@ session_start();
             ?>
         </div>
     </div>
-    <div class="checkout btn"><a href="confirm.php" onclick="getCustomerInfo()">Place Order!</a></div>
     <?php
     require_once "scripts.php";
     ?>
+    <?php
+    $name = $_SESSION['fname'];
 
+
+    ?>
 
 </body>
 

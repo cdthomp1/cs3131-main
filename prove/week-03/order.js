@@ -1,6 +1,7 @@
 function getCustomerInfo(){
     var queryString = "";
     var name = document.getElementById("fname").value
+    queryString = "name=" + name
 
     //firstname=Cameron&email=camthomp96@gmail.com&address=175 W 5th S, apt 108&city=Rexburg&state=ID&zip=83440
 
