@@ -1,5 +1,6 @@
 <?php
 session_start();
+$name = $_SESSION['fname'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,10 +56,6 @@ session_start();
     </div>
     <?php
     require_once "scripts.php";
-    ?>
-    <?php
-    $name = $_SESSION['fname'];
-    echo "fname:" . $name;
     ?>
 
 </body>
