@@ -31,7 +31,8 @@ $_SESSION['fname'];
                         <h3>Order Placed!</h3>
                         <p>Order will be shiped to: </p>
                         <?php
-                        echo $_SESSION['fname'];
+                        //echo $_SESSION['fname'];
+                        print_r($_SESSION);
                         ?>
                         <h4>Order Contents:</h4>
                         <?php
