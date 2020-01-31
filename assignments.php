@@ -31,6 +31,7 @@
                             <h3><a href="http://stark-island-81932.herokuapp.com/prove/week-01/index.html" target="_blank">Week 01 Assignment: Hello World</a></h3>
                             <h3><a href="http://stark-island-81932.herokuapp.com/" target="_blank">Week 02 Assignment: Home Page</a></h3>
                             <h3><a href="http://stark-island-81932.herokuapp.com/prove/week-03" target="_blank">Week 03 Assignment: Shopping Cart</a></h3>
+                            <h3><a href="http://stark-island-81932.herokuapp.com/db/auto-maintenance.sql" target="_blank">Week 04 Assignment: DB Setup</a></h3>
                         </div>
                     </div>
                 </div>
@@ -39,6 +40,7 @@
                     <div id="team-activites-container">
                         <h3><a href="http://stark-island-81932.herokuapp.com/team-activities/week-02/index.html" target="_blank">Week 02 Team Activity</a></h3>
                         <h3><a href="http://stark-island-81932.herokuapp.com/team-activities/week-03/" target="_blank">Week 03 Team Activity</a></h3>
+                        <h3><a href="http://stark-island-81932.herokuapp.com/team-activities/week-04/genearl-conference.sql" target="_blank">Week 04 Team Activity</a></h3>
                     </div>
                 </div>
             </div>
