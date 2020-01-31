@@ -224,3 +224,7 @@ h2 {
     display: flex;
     flex-direction: column;
 }
+
+#checkout-window {
+    margin-bottom: 20px;
+}
