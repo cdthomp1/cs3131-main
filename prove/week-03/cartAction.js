@@ -19,6 +19,9 @@ function cartAction(action, product_code) {
                 break;
         }
     }
+
+    console.log(queryString);
+
     jQuery.ajax({
         url: "cart-action.php",
         data: queryString,

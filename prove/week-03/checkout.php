@@ -52,7 +52,7 @@ session_start();
             ?>
         </div>
     </div>
-    <div class="checkout btn"><a href="confirm.php">Place Order!</a></div>
+    <div class="checkout btn"><a href="confirm.php" onclick="getCustomerInfo()">Place Order!</a></div>
     <?php
     require_once "scripts.php";
     ?>

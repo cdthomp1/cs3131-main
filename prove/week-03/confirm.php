@@ -29,7 +29,13 @@ session_start();
                     <div class="mos9-window__content">
                         <h3>Order Placed!</h3>
                         <p>Order will be shiped to: </p>
+                        <?php
+                        require_once "customer.php";
+                        ?>
                         <h4>Order Contents:</h4>
+                        <?php
+                        require_once "order.php";
+                        ?>
                     </div>
                 </div>
             </div>
@@ -37,7 +43,7 @@ session_start();
 
 
     </div>
-  
+
     <?php
     require_once "scripts.php";
     ?>
