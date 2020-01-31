@@ -190,6 +190,15 @@ h2 {
     left: 10px;
     top: 10px;
 }
+.back {
+    left: 10px;
+    top: 10px;
+}
+
+.checkout {
+    right: 10px;
+    top: 10px;
+}
 
 .back a {
     text-decoration: none;
@@ -207,3 +216,4 @@ h2 {
     margin-top: 50px;
     margin-bottom: 20px;
 }
+
