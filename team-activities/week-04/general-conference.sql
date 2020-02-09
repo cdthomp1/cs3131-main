@@ -70,3 +70,16 @@ Select note_text from note n
     Left Join talk t on t.talk_id = n.talk_id
 Where talk = 'Holiness and the Plan of Happiness'
 ;
+
+
+INSERT INTO appointment (appointment_date, appointment_time, appointmet_type, appointment_est_cost, appointment_vehicle_id,
+  appointment_customer_id, appointment_remind_next_apt, appointment_working_tech_id) VALUES (
+    '3/26/2020',
+    '11:30 AM',
+    'Battery Maintenance',
+    3000,
+    (Select vehicle_id from vehicle where vehicle_make = 'Ford' and vehicle_license_plate = 'DCG12Z'),
+    (Select customer_id from customer where customer_name = 'Elon Musk'),
+    current_date,
+    (Select technician_id from technician where technician_name = 'Jeff Bezos')
+);
