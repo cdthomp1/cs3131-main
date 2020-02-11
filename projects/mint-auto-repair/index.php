@@ -89,12 +89,13 @@ try {
                 <?php
                 foreach ($db->query('SELECT * FROM employees') as $row) {
                     echo 'emplpyee: ' . $row['employee_name'];
-                    echo '<br/>';
-                    echo 'position: ' . $row['employee_position'];
-                    echo '<br/>';
-                    echo 'availability: ' . $row['employee_availability'];
-                    echo '<br/>';
-                    echo 'picture: <img src="' . $row['employee_picture'] . '">';
+                    echo '<div class="testi">
+                    <img src="' . $row['employee_picture'] . '">
+                    <div>
+                        <h2>' . $row['employee_name'] . '</h2>
+                        <h4>' . $row['employee_position'] . '</h4>
+                    </div>
+                </div>';
                 }
                 ?>
                 <div class="testi">
