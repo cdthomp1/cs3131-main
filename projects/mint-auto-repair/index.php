@@ -88,7 +88,6 @@ try {
             <div class="staffContainer">
                 <?php
                 foreach ($db->query('SELECT * FROM employees') as $row) {
-                    echo 'emplpyee: ' . $row['employee_name'];
                     echo '<div class="testi">
                     <img class="profile" src="' . $row['employee_picture'] . '">
                     <div>
@@ -98,14 +97,6 @@ try {
                 </div>';
                 }
                 ?>
-                <div class="testi">
-                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
-                    <div>
-                        <h2>Eleanor Crisp</h2>
-                        <h4>Lulu Bella Boutique</h4>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
