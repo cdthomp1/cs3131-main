@@ -87,8 +87,12 @@ try {
             <h2>Our Staff</h2>
             <div class="staffContainer">
                 <?php
-                foreach ($db->query('SELECT * FROM customer') as $row) {
-                    echo 'customer: ' . $row['customer_name'];
+                foreach ($db->query('SELECT * FROM employees') as $row) {
+                    echo 'emplpyee: ' . $row['employee_name'];
+                    echo '<br/>';
+                    echo 'position: ' . $row['employee_position'];
+                    echo '<br/>';
+                    echo 'availability: ' . $row['employee_availability'];
                     echo '<br/>';
                 }
                 ?>
