@@ -90,7 +90,7 @@ try {
                 foreach ($db->query('SELECT * FROM employees') as $row) {
                     echo 'emplpyee: ' . $row['employee_name'];
                     echo '<div class="testi">
-                    <img src="' . $row['employee_picture'] . '">
+                    <img class="profile src="' . $row['employee_picture'] . '">
                     <div>
                         <h2>' . $row['employee_name'] . '</h2>
                         <h4>' . $row['employee_position'] . '</h4>
