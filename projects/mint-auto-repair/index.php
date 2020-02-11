@@ -94,7 +94,7 @@ try {
                     echo '<br/>';
                     echo 'availability: ' . $row['employee_availability'];
                     echo '<br/>';
-                    echo 'availability: ' . $row['employee_picture'];
+                    echo 'picture: <img src="' . $row['employee_picture'] . '">';
                 }
                 ?>
                 <div class="testi">
