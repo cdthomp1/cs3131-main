@@ -92,7 +92,7 @@ $scriptureResults = $scriptureStatement->fetchALL(PDO::FETCH_ASSOC);
        <?php echo '"'.$value['book'].' '.$value['chapter'].':'.$value['verse'] . ' - ';?>
        <?php $topicStatement = $db->query('SELECT sl.topicid, t.name from scripture_links sl
         Left Join topic t on t.id = sl.topicid
-        Where sl.scriptureId = :id
+        Where sl.scriptureid = :id
         ;');
         $topicStatement->bindParam(':id', $value['id']);
         $executeSuccess = $topicStatement->execute();
