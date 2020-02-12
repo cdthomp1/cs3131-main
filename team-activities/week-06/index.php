@@ -18,24 +18,9 @@ try {
   die();
 }
 
-
-if (isset($_GET['id'])) {
-  $statement = $db->prepare(
-    "SELECT book, chapter, verse, content, id
-        FROM Scriptures WHERE id = :id
-      ;"
-  );
-  $statement->bindParam(':id', $_GET['id']);
-  // execute the statement
-  $executeSuccess = $statement->execute();
-}
-
 $topicStatement = $db->query('SELECT name FROM topic order by name asc');
 $executeSuccess = $topicStatement->execute();
 $topics = $topicStatement->fetchALL(PDO::FETCH_ASSOC);
-
-// convert to array
-$scriptureResults = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 ​
@@ -50,16 +35,7 @@ $scriptureResults = $statement->fetchAll(PDO::FETCH_ASSOC);
 </head>
 ​
 <body>
-<!--   <?php //foreach ($scriptureResults as $scripture) {
-   // echo '<h2>' . $scripture['book'];
-    //echo ' ' . $scripture['chapter'];
-    //echo ':' . $scripture['verse'];
-   // echo '</h2>';
-    //echo '<br>';
-    //echo '<p>' . $scripture['content'];
-    //echo '</p>';
-  //}
-   ?> -->
+
 
   <form action="scriptureinsert.php" method="POST">
     <input type="text" name="book"/><br>
