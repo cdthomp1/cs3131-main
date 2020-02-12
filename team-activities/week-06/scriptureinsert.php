@@ -55,7 +55,7 @@ $topicInsert->bindParam(':verse', $verse);
 $topicInsert->bindParam(':content', $content);
 $topicInsert->bindParam(':name', $name);
 //$executeSuccess = $topicInsert->execute();
-echo $name;
+echo print_r($names);
 }
 
 $scriptureStatement = $db->query('SELECT s.book, s.chapter, s.verse, s.id
