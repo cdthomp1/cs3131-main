@@ -46,8 +46,8 @@ $executeSuccess = $scriptureInsert->execute();
 
 foreach ($names as $name=>$value) {
 $topicInsert = $db->prepare('INSERT INTO scripture_links (scriptureid, topicid) VALUES (
-    (SELECT distinct id FROM scriptures WHERE book = :book and chapter = :chapter and verse = :verse and content = :content),
-    (SELECT distinct id FROM topic WHERE name = :name)
+    (SELECT id FROM scriptures WHERE book = :book and chapter = :chapter and verse = :verse and content = :content limit 1),
+    (SELECT id FROM topic WHERE name = :name limit 1)
 )');
 $topicInsert->bindParam(':book', $book);
 $topicInsert->bindParam(':chapter', $chapter);
