@@ -38,10 +38,10 @@ $topics = $topicStatement->fetchALL(PDO::FETCH_ASSOC);
 
 
   <form action="scriptureinsert.php" method="POST">
-    <input type="text" name="book"/><br>
-	<input type="text" name="chapter"/><br>
-	<input type="text" name="verse"/><br>
-	<textarea name="content"></textarea><br>
+   Book: <input type="text" name="book"/><br>
+	Chapter: <input type="text" name="chapter"/><br>
+	Verse: <input type="text" name="verse"/><br>
+	Content: <textarea name="content"></textarea><br>
 
 
 <?php foreach ($topics as $topic) {

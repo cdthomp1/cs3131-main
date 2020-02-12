@@ -8,7 +8,7 @@ $dbUrl = getenv('DATABASE_URL');
 $book = $_POST['book'];
 $chapter = $_POST['chapter'];
 $verse = $_POST['verse'];
-$names = $_POST[''];
+//$names = $_POST[''];
 $content = $_POST['content'];
 $names[] = $_POST['topics'];
 
@@ -37,7 +37,7 @@ try {
   die();
 }
 
-$scriptureInsert = $db->prepare('INSERT INTO scripture (book, chapter, verse, content) VALUES (:book, :chapter, :verse, :content)');
+$scriptureInsert = $db->prepare('INSERT INTO scriptures (book, chapter, verse, content) VALUES (:book, :chapter, :verse, :content)');
 $scriptureInsert->bindParam(':book', $book);
 $scriptureInsert->bindParam(':chapter', $chapter);
 $scriptureInsert->bindParam(':verse', $verse);
@@ -46,7 +46,7 @@ $executeSuccess = $scriptureInsert->execute();
 
 foreach ($names as $name) {
 $topicInsert = $db->prepare('INSERT INTO scripture_links (scriptureId, topicID) VALUES (
-    (SELECT id FROM scripture WHERE book = :book and chapter = :chapter and verse = :verse and content = :content),
+    (SELECT id FROM scriptures WHERE book = :book and chapter = :chapter and verse = :verse and content = :content),
     (SELECT id FROM topic WHERE name = :name)
 )');
 $topicInsert->bindParam(':book', $book);
@@ -58,7 +58,7 @@ $executeSuccess = $topicInsert->execute();
 }
 
 $scriptureStatement = $db->query('SELECT s.book, s.chapter, s.verse, s.id
-FROM Scripture s
+FROM scriptures s
 ;');
 
 
