@@ -91,7 +91,7 @@ $scriptureResults = $scriptureStatement->fetchALL(PDO::FETCH_ASSOC);
   <?php foreach ($scriptureResults as $key => $value): ?>
      <li>
        <?php echo '"'.$value['book'].' '.$value['chapter'].':'.$value['verse'] . ' - ';?>
-       <?php $topicStatement = $db->query('SELECT sl.topicid, t.name from scripture_links sl
+       <?php $topicStatement = $db->prepare('SELECT sl.topicid, t.name from scripture_links sl
         Left Join topic t on t.id = sl.topicid
         Where sl.scriptureid = :id
         ;');
