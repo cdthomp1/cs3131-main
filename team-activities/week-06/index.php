@@ -45,7 +45,7 @@ $topics = $topicStatement->fetchALL(PDO::FETCH_ASSOC);
 
 
 <?php foreach ($topics as $topic) {
-    echo '<input type="checkbox" name="'.$topic['name']. '" value="'.$topic['name'].'"><label for="'.$topic['name'].'">'.$topic['name'].'</label>';
+    echo '<input type="checkbox" name="topics[]" value="'.$topic['name'].'"><label for="'.$topic['name'].'">'.$topic['name'].'</label>';
   } ?>
 
   <input type=submit value="Insert the Scripture"/>
