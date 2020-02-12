@@ -50,15 +50,16 @@ $scriptureResults = $statement->fetchAll(PDO::FETCH_ASSOC);
 </head>
 ​
 <body>
-  <?php foreach ($scriptureResults as $scripture) {
-    echo '<h2>' . $scripture['book'];
-    echo ' ' . $scripture['chapter'];
-    echo ':' . $scripture['verse'];
-    echo '</h2>';
-    echo '<br>';
-    echo '<p>' . $scripture['content'];
-    echo '</p>';
-  } ?>
+  <?php //foreach ($scriptureResults as $scripture) {
+   // echo '<h2>' . $scripture['book'];
+    //echo ' ' . $scripture['chapter'];
+    //echo ':' . $scripture['verse'];
+   // echo '</h2>';
+    //echo '<br>';
+    //echo '<p>' . $scripture['content'];
+    //echo '</p>';
+  //}
+   ?>
 
   <form action="scriptureinsert.php" method="POST">
     <input type="text" name="book"/><br>
