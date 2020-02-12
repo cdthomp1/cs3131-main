@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 try {
   $dbUrl = getenv('DATABASE_URL');
 
@@ -37,7 +37,7 @@ $topics = $topicStatement->fetchALL(PDO::FETCH_ASSOC);
 // convert to array
 $scriptureResults = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-?> -->
+?>
 ​
 <!DOCTYPE html>
 <html lang="en-US">
@@ -68,9 +68,9 @@ $scriptureResults = $statement->fetchAll(PDO::FETCH_ASSOC);
 	<textarea name="content"></textarea><br>
 
 
-<!--   <?php foreach ($topics as $topic) {
+<?php foreach ($topics as $topic) {
     echo '<input type="checkbox" name="'.$topic['name']. '" value="'.$topic['name'].'"><label for="'.$topic['name'].'">'.$topic['name'].'</label>';
-  } ?> -->
+  } ?>
 
   <input type=submit value="Insert the Scripture"/>
   </form>
