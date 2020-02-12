@@ -56,7 +56,7 @@ $scriptureResults = $statement->fetchAll(PDO::FETCH_ASSOC);
 <html lang="en-US">
 ​
 <head>
-  <title>Teach 05</title>
+  <title>Teach 06</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta charset="utf-8">
 ​
@@ -73,7 +73,7 @@ $scriptureResults = $statement->fetchAll(PDO::FETCH_ASSOC);
     echo '</p>';
   } ?>
 
-  <form action="" method="POST">
+  <form action="scriptureinsert.php" method="POST">
     <input type="text" name="book"/><br>
 	<input type="text" name="chapter"/><br>
 	<input type="text" name="verse"/><br>
