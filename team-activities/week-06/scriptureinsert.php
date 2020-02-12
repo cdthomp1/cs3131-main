@@ -44,10 +44,10 @@ $scriptureInsert->bindParam(':verse', $verse);
 $scriptureInsert->bindParam(':content', $content);
 $executeSuccess = $scriptureInsert->execute();
 
-foreach ($names as $name) {
+foreach ($names as $name=>$value) {
 $topicInsert = $db->prepare('INSERT INTO scripture_links (scriptureid, topicid) VALUES (
-    (SELECT id FROM scriptures WHERE book = :book and chapter = :chapter and verse = :verse and content = :content),
-    (SELECT id FROM topic WHERE name = :name)
+    (SELECT distinct id FROM scriptures WHERE book = :book and chapter = :chapter and verse = :verse and content = :content),
+    (SELECT distinct id FROM topic WHERE name = :name)
 )');
 $topicInsert->bindParam(':book', $book);
 $topicInsert->bindParam(':chapter', $chapter);
@@ -100,7 +100,7 @@ $scriptureResults = $scriptureStatement->fetchALL(PDO::FETCH_ASSOC);
         $topicResults = $topicStatement->fetchALL(PDO::FETCH_ASSOC);
         $topicString = '';
         foreach ($topicResults as $topic) {
-          $topicString.= $topic . ', ';
+          $topicString.= $topic['name'] . ', ';
         }
         $topicString = rtrim($topicString, ", ");
         echo $topicString;
