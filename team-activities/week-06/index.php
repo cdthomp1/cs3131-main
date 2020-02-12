@@ -1,6 +1,12 @@
 <?php
 $dbUrl = getenv('DATABASE_URL');
 
+// Names of tables for this assignment
+// scriptures
+// scrioture_links (This table has the many to many relationship)
+// topic
+
+
 if (empty($dbUrl)) {
   // This gets us the heroku credentials without revealing credentials in our code
   $dbUrl = exec("heroku config:get DATABASE_URL");
@@ -37,6 +43,10 @@ if (isset($_GET['id'])) {
   $executeSuccess = $statement->execute();
 }
 
+$topicStatement = $db->query('SELECT name FROM topic order by name asc');
+$executeSuccess = $topicStatement->execute();
+$topics = $topicStatement->fetchALL(PDO::FETCH_ASSOC);
+
 // convert to array
 $scriptureResults = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -62,6 +72,20 @@ $scriptureResults = $statement->fetchAll(PDO::FETCH_ASSOC);
     echo '<p>' . $scripture['content'];
     echo '</p>';
   } ?>
+
+  <form action="" method="POST">
+    <input type="text" name="book"/><br>
+	<input type="text" name="chapter"/><br>
+	<input type="text" name="verse"/><br>
+	<textarea name="content"></textarea><br>
+
+
+  <?php foreach ($topics as $topic) {
+    echo '<input type="checkbox" name="'.$topic['name']. '" value="'.$topic['name'].'"><label for="'.$topic['name'].'">'.$topic['name'].'</label>';
+  } ?>
+
+  <input type=submit value="Insert the Scripture"/>
+  </form>
 ​
 </body>
 ​
