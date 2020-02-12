@@ -45,7 +45,7 @@ $scriptureInsert->bindParam(':content', $content);
 $executeSuccess = $scriptureInsert->execute();
 
 foreach ($names as $name) {
-$topicInsert = $db->prepare('INSERT INTO scripture_links (scriptureId, topicID) VALUES (
+$topicInsert = $db->prepare('INSERT INTO scripture_links (scriptureid, topicid) VALUES (
     (SELECT id FROM scriptures WHERE book = :book and chapter = :chapter and verse = :verse and content = :content),
     (SELECT id FROM topic WHERE name = :name)
 )');
@@ -90,8 +90,8 @@ $scriptureResults = $scriptureStatement->fetchALL(PDO::FETCH_ASSOC);
   <?php foreach ($scriptureResults as $key => $value): ?>
      <li>
        <?php echo '"'.$value['book'].' '.$value['chapter'].':'.$value['verse'] . ' - ';?>
-       <?php $topicStatement = $db->query('SELECT sl.topicId, t.name from scripture_links sl
-        Left Join topic t on t.id = sl.topicId
+       <?php $topicStatement = $db->query('SELECT sl.topicid, t.name from scripture_links sl
+        Left Join topic t on t.id = sl.topicid
         Where sl.scriptureId = :id
         ;');
         $topicStatement->bindParam(':id', $value['id']);
