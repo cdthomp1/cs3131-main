@@ -10,7 +10,7 @@ $chapter = $_POST['chapter'];
 $verse = $_POST['verse'];
 //$names = $_POST[''];
 $content = $_POST['content'];
-$names[] = $_POST['topics'];
+$names = $_POST['topics'];
 
 if (empty($dbUrl)) {
   // This gets us the heroku credentials without revealing credentials in our code
