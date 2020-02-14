@@ -39,7 +39,7 @@ try {
         <div class="navBar">
             <div class="companyName">Mint Auto Repair</div>
             <div class="links">
-                <div class="link"><a href="schedule.html">Appointments</a></div>
+                <div class="link"><a href="calendar.php">Appointments</a></div>
                 <div class="link"><a href="login.html">Login</a></div>
             </div>
         </div>
