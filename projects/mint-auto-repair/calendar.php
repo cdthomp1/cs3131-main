@@ -36,7 +36,7 @@ try {
     echo $calendar->show();
     ?>
     <div class="scheduleForm">
-        <form>
+        <form action="details.php">
             <label for="date">You would like to create an appointment on: </label><input id="date" type="text" name="date"><br />
             <label for="name">What is your name? </label><input id="name" type="text" name="name"></br />
             <label for="time">What time?</label><input id="time" type="time" name="time"><br />
@@ -45,7 +45,16 @@ foreach ($db->query("SELECT * FROM employees WHERE employee_position='Technician
     echo '<option value="'.$row['employee_name'].'">'. $row['employee_name'].'</option>';
 }
 ?>
-            </select>
+            </select><br />
+            <lable for="typeOf">What Type of Appointment do you need></lable><select id="typeOf" name="typeOf">
+                <option value="Oil Change">Oil Change</option>
+                <option value="Tire Rotaion">Tire Rotation</option>
+                <option value="Brakes">Brakes</option>
+                <option value="Alignment">Alignment</option>
+                <option value="Coolant Flush">Coolant Flush</option>
+                <option value="Wash">Wash</option>
+            </select><br />
+            <button type="submit">Create Appointment!</button>
         </form>
     </div>
     <script src="schedule.js"></script>
