@@ -46,7 +46,7 @@ foreach ($db->query("SELECT * FROM employees WHERE employee_position='Technician
 }
 ?>
             </select><br />
-            <lable for="typeOf">What Type of Appointment do you need></lable><select id="typeOf" name="typeOf">
+            <label for="typeOf">What Type of Appointment do you need></label><select id="typeOf" name="typeOf">
                 <option value="Oil Change">Oil Change</option>
                 <option value="Tire Rotaion">Tire Rotation</option>
                 <option value="Brakes">Brakes</option>
