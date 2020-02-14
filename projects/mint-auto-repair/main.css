@@ -225,7 +225,7 @@ h2 {
  }
  
 
- @media screen and (min-width: 350px) {
+ @media screen and (min-width: 350px) and (max-width: 350px){
     html, body {
       width: 100%;
     }
