@@ -7,5 +7,5 @@ function showDate(id) {
 }
 
 function showForm() {
-    document.getElementsByClassName("scheduleForm")[0].display = "block";
+    document.getElementsByClassName("scheduleForm")[0].style.display = "block";
 }
