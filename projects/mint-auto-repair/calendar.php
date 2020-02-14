@@ -39,7 +39,7 @@ try {
         <form>
             <label for="date">You would like to create an appointment on: </label><input id="date" type="text" name="date"><br />
             <label for="name">What is your name? </label><input id="name" type="text" name="name"></br />
-            <label for="time">What time?</label><select id="time" type="time" name="time"></select><br />
+            <label for="time">What time?</label><input id="time" type="time" name="time"><br />
             <label for="tech">Who would you like to work on your car? </label><select id="tech" name="tech"><?php
 foreach ($db->query("SELECT * FROM employees WHERE employee_position='technician'") as $row) {
     echo '<option value="'.$row['employee_name'].'"><'. $row['employee_name'].'</option>';
