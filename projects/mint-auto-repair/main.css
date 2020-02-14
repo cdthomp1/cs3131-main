@@ -224,8 +224,7 @@ h2 {
     justify-content: space-evenly;
  }
  
-
- @media screen and (min-width: 350px) and (max-width: 350px){
+ @media screen and (max-width: 370px){
     html, body {
       width: 100%;
     }

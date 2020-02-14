@@ -98,6 +98,55 @@ try {
                 }
                 ?>
             </div>
+            <div class="clientReviews">
+            <div class="clientReviewHeader">
+                <h2>Client Reviews</h2>
+            </div>
+            <div class="clientReviewContainer">
+                <div class="review">
+                    <div>
+                        <h2>Sammy Johnson</h2>
+                        <span style="color: rgb(191, 138, 3)">★★★★★</span>
+                        <p>We have had our cars fixed here several times. The price is always comparable and well done!
+                            This last time, they fixed my hudbands clutch, but after driving it home he noticed it still
+                            wasn’t 100%. They took the car and will fix it again, they warranty their services
+                            thankfully. A frustrating situation but the customer service was great! We will continue to
+                            use them for our car needs!</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div>
+                        <h2>Sammy Johnson</h2>
+                        <span style="color: rgb(191, 138, 3)">★★★★★</span>
+                        <p>We have had our cars fixed here several times. The price is always comparable and well done!
+                            This last time, they fixed my hudbands clutch, but after driving it home he noticed it still
+                            wasn’t 100%. They took the car and will fix it again, they warranty their services
+                            thankfully. A frustrating situation but the customer service was great! We will continue to
+                            use them for our car needs!</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div>
+                        <h2>Sammy Johnson</h2>
+                        <span style="color: rgb(191, 138, 3)">★★★★★</span>
+                        <p>We have had our cars fixed here several times. The price is always comparable and well done!
+                            This last time, they fixed my hudbands clutch, but after driving it home he noticed it still
+                            wasn’t 100%. They took the car and will fix it again, they warranty their services
+                            thankfully. A frustrating situation but the customer service was great! We will continue to
+                            use them for our car needs!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="copyRight"></div>
+            <div>
+                <p>Mechanic</p>
+            </div>
+            <div>
+                <p>Scranton, PA</p>
+            </div>
+        </div>
         </div>
     </div>
 
