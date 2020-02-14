@@ -44,13 +44,14 @@ try {
             </select>
         </form>
 
-        <?php
+
+    </div>
+    <?php
 foreach ($db->query("SELECT * FROM employees WHERE employee_position='technician'") as $row) {
     //echo '<option value="'.$row['employee_name'].'"><'. $row['employee_name'].'</option>';
     echo $row['employee_name'];
 }
 ?>
-    </div>
     <script src="schedule.js"></script>
 </body>
 
