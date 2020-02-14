@@ -12,14 +12,10 @@
   $time = $_GET["time"];
   $tech = $_GET["tech"];
   $typeOf = $_GET["typeOf"];
-
-
-  echo '<p>DATE: '.$date.'</p>';
-  echo '<p>NAME: '.$name.'</p>';
-  echo '<p>TIME: '.$time.'</p>';
-  echo '<p>TECH: '.$tech.'</p>';
-  echo '<p>APPOINTMENT TYPE: '.$typeOf.'</p>';
 ?>
+
+<h2>Congradulations <?php $name?></h2>
+<p>You have successfuly created an appointment with <?php echo $tech?> @ <?php echo $time?> on <?php echo $date?> for an <?php echo $typeOf?>!</p>
 </body>
 </html>
 
