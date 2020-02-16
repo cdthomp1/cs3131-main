@@ -10,7 +10,7 @@
     <title>Mint Auto Repair</title>
 </head>
 <body>
-    <form action="sucess.php" style="border:1px solid #ccc">
+    <form action="sucessSignIn.php" style="border:1px solid #ccc">
   <div class="container">
     <h1>Log In</h1>
     <label for="email"><b>Email</b></label>
@@ -23,7 +23,7 @@
     </label>
 
     <div class="clearfix">
-      <a href="login.php" class="signupbtn">Log In</a>
+    <button type="submit" class="signupbtn">Log In</button>
     </div>
   </div>
 </form>
