@@ -16,11 +16,11 @@
   $userLoginStatement = $db->prepare('SELECT exists (SELECT 1 FROM customer WHERE customer_email = :email and customer_password = :psw LIMIT 1)');
   $userLoginStatement->bindParam(':email', $_SESSION["email"]);
   $userLoginStatement->bindParam(':psw', $_SESSION["pass"]);
-  $res = $userLoginStatement->execute();
 
-  echo $res;
 
-  if($res) {
+
+
+  if($userLoginStatement->execute()) {
     // header("Location: index.php");
     echo "res";
   } else {
