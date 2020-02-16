@@ -17,15 +17,16 @@
   $userLoginStatement->bindParam(':email', $_SESSION["email"]);
   $userLoginStatement->bindParam(':psw', $_SESSION["pass"]);
 
+  $res = $userLoginStatement->execute();
 
+  echo $res;
 
-
-  if($userLoginStatement->execute() > 1) {
+  if($res > 1) {
     // header("Location: index.php");
     echo "res";
   } else {
     $_SESSION["badLogin"] = '<p style="color: red;">USERNAME OR PASSWORD IS INCORRECT!</p>';
-    header("Location: login.php");
+    //header("Location: login.php");
 
   }
 ?>
