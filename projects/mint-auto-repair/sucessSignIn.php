@@ -13,11 +13,17 @@
     $_SESSION["rememberMe"] = false;
   }
 
-  if ($db->query('SELECT exists (SELECT 1 FROM customer WHERE customer_email = $_SESSION["email"] and customer_password = $_SESSION["pass"] LIMIT 1)')) {
-    echo "hello";
-  }
+  $userLoginStatement = $db->query('SELECT exists (SELECT 1 FROM customer WHERE customer_email = :email and customer_password = :psw LIMIT 1)');
+  $userLoginStatement->bindParam(':email', $_SESSION["email"]);
+  $topicuserLoginStatementnsert->bindParam(':psw', $_SESSION["pass"]);
 
+  if($executeSuccess = $userLoginStatement->execute()) {
+    echo "hello";
+  } else {
+    echo "try again";
+  }
 ?>
 
 
 
+<!-- <?php header("Location: index.php"); ?> -->
