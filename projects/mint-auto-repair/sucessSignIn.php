@@ -3,7 +3,6 @@
 
 <?php
   $_SESSION["email"] = $_GET["email"];
-  $_SESSION["name"] = $_GET["name"];
   $_SESSION["pass"] = $_GET["psw"];
   $_SESSION["loggedIn"] = true;
 
@@ -16,6 +15,8 @@
 
   $sql = "SELECT exists (SELECT 1 FROM customer WHERE customer_email = '".$_SESSION["email"]."' and customer_password = '".$_SESSION["pass"]."' LIMIT 1);";
   echo $sql . "<br>";
+
+  echo $db;
 
   $ret = pg_query($db, $sql);
      if(!$ret){
