@@ -10,15 +10,11 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-  $_SESSION["email"] = $_GET["email"];
-  $_SESSION["name"] = $_GET["name"];
-  $_SESSION["pass"] = $_GET["psw"];
-
-?>
 
 
-<a href="test2.php">TAKE ME TO THE REAL DATA</a>
+<p>Congradulations <?php echo $_SESSION["name"]?></p>
+<p>You have successfuly created an account with an email of: <?php echo $_SESSION["email"]?> and a password of: <?php echo $_SESSION["pass"]?></p>
+
 </body>
 </html>
 
