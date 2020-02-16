@@ -21,7 +21,7 @@
 
   if($userLoginStatement->rowCount() > 0) {
     // header("Location: index.php");
-    echo $userLoginStatement->rowCount();
+    echo $userLoginStatement;
   } else {
     $_SESSION["badLogin"] = '<p style="color: red;">USERNAME OR PASSWORD IS INCORRECT!</p>';
     header("Location: login.php");
