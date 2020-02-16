@@ -7,11 +7,13 @@
 </head>
 <body>
 <?php
+  $email = $_GET["email"];
+  $pass = $_GET["psw"];
 
 ?>
 
 <h2>Congradulations <?php $name?></h2>
-<p>You have successfuly created an appointment with <?php echo $tech?> @ <?php echo $time?> on <?php echo $date?> for an <?php echo $typeOf?>!</p>
+<p>You have successfuly created an account with an email of: <?php echo $email?> and a password of: <?php echo $pass?></p>
 </body>
 </html>
 
