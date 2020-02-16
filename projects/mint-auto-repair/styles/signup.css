@@ -20,9 +20,9 @@ hr {
   margin-bottom: 25px;
 }
 
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
+
+button a{
+  background-color: steelblue;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -37,9 +37,9 @@ button:hover {
 }
 
 /* Extra styles for the cancel button */
-.cancelbtn {
+.signupbtn {
   padding: 14px 20px;
-  background-color: #f44336;
+  background-color: lightseagreen;
 }
 
 /* Float cancel and signup buttons and add an equal width */

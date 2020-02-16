@@ -22,7 +22,7 @@
 
                 <?php
                 if ($_SESSION["loggedIn"] != true) {
-                    echo '<div class="link"><a href="login.php">Login</a></div>';
+                    echo '<div class="link"><a href="user.php">Login</a></div>';
                 } else {
                     echo '<div class="link"><a href="calendar.php">Appointments</a></div>';
                 }
