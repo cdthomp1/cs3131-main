@@ -13,9 +13,9 @@
     $_SESSION["rememberMe"] = false;
   }
 
-  $userLoginStatement = $db->query('SELECT exists (SELECT 1 FROM customer WHERE customer_email = :email and customer_password = :psw LIMIT 1)');
   $userLoginStatement->bindParam(':email', $_SESSION["email"]);
   $userLoginStatement->bindParam(':psw', $_SESSION["pass"]);
+  $userLoginStatement = $db->query('SELECT exists (SELECT 1 FROM customer WHERE customer_email = :email and customer_password = :psw LIMIT 1)');
 
   if($executeSuccess = $userLoginStatement->execute()) {
     echo "hello";
