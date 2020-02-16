@@ -10,7 +10,7 @@ h2 {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.637)), url("images/header-image.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.637)), url("../images/header-image.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
