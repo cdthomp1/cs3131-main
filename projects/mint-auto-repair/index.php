@@ -63,7 +63,7 @@
 
     <div class="main">
         <div class="about">
-            <div class="aboutImg"><img class="imgAbout" src="./aboutImg.jpg"></div>
+            <div class="aboutImg"><img class="imgAbout" src="images/aboutImg.jpg"></div>
             <div class="aboutArticle">
                 <h2>About Us</h2>
                 <p>Hit the road in your dependable car that get you where you’re going with no worries. Mint Auto Repair has provided Scranton, PA residents with comprehensive auto repairs since 1997. For personalized service and repairs from the experts, now ready to serve your car with premium auto care. We can do everything from suspension repairs to diagnostics. Rely on us when you need any general auto service.</p>
