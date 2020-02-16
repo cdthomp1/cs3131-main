@@ -24,7 +24,7 @@ try {
 <html>
 
 <head>
-    <link href="calendar.css" type="text/css" rel="stylesheet" />
+    <link href="styles/calendar.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
@@ -57,7 +57,7 @@ foreach ($db->query("SELECT * FROM employees WHERE employee_position='Technician
             <button type="submit">Create Appointment!</button>
         </form>
     </div>
-    <script src="schedule.js"></script>
+    <script src="scripts/schedule.js"></script>
 </body>
 
 </html>

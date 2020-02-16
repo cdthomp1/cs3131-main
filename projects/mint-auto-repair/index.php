@@ -7,7 +7,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/main.css">
     <style>
 
     </style>
@@ -136,7 +136,7 @@
         </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
