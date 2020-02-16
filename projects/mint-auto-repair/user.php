@@ -13,7 +13,7 @@
     <h1>Welcome to Mint Auto Repair</h1>
     <h2>Please Create an account to get started or sign in.</h2>
 
-    <form action="sucess.php" style="border:1px solid #ccc">
+    <form action="sucessSignUp.php" style="border:1px solid #ccc">
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
