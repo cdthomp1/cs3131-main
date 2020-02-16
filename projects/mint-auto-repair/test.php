@@ -13,7 +13,7 @@
 
 ?>
 
-<h2>Congradulations <?php $name?></h2>
+<p>Congradulations <?php $name?></p>
 <p>You have successfuly created an account with an email of: <?php echo $email?> and a password of: <?php echo $pass?></p>
 </body>
 </html>
