@@ -22,10 +22,10 @@
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
     </label>
     <?php 
-      if(headers_list() > 0) {
-        echo headers_list()[0];
+      if ($_SESSION["badLogin"] != '') {
+        echo $_SESSION["badLogin"];
+        $_SESSION["badLogin"] = '';
       }
-    
     ?>
     <div class="clearfix">
     <button type="submit" class="signupbtn">Log In</button>
