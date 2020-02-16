@@ -13,15 +13,25 @@
     $_SESSION["rememberMe"] = false;
   }
 
-  $userLoginStatement->bindParam(':email', $_SESSION["email"]);
-  $userLoginStatement->bindParam(':psw', $_SESSION["pass"]);
-  $userLoginStatement = $db->query('SELECT exists (SELECT 1 FROM customer WHERE customer_email = :email and customer_password = :psw LIMIT 1)');
 
-  if($executeSuccess = $userLoginStatement->execute()) {
-    echo "hello";
-  } else {
-    echo "try again";
+  $sql = "SELECT exists (SELECT 1 FROM customer WHERE customer_email = '".$_SESSION["email"]."' and customer_password = '".$_SESSION["pass"]."' LIMIT 1);";
+  echo $sql . "<br>";
+
+  $ret = pg_query($db, $sql);
+     if(!$ret){
+        echo pg_last_error($db);
+        exit;
+     }
+  $bool = pg_fetch_row($ret);
+  echo $bool['0'] . "<br>";
+  if($bool['0'] === "t"){
+          echo "Login Successful";
+
+  }else{
+          $errors = $errors . "Passwords do not match. Please try again. <br>";
   }
+
+
 ?>
 
 
