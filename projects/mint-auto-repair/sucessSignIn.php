@@ -16,12 +16,12 @@
   $userLoginStatement = $db->prepare('SELECT exists (SELECT 1 FROM customer WHERE customer_email = :email and customer_password = :psw LIMIT 1)');
   $userLoginStatement->bindParam(':email', $_SESSION["email"]);
   $userLoginStatement->bindParam(':psw', $_SESSION["pass"]);
-  $userLoginStatement->execute();
+  $res = $userLoginStatement->execute();
 
 
-  if($userLoginStatement->rowCount() > 0) {
+  if($res) {
     // header("Location: index.php");
-    echo $userLoginStatement;
+    echo true;
   } else {
     $_SESSION["badLogin"] = '<p style="color: red;">USERNAME OR PASSWORD IS INCORRECT!</p>';
     header("Location: login.php");
