@@ -21,7 +21,7 @@
 
   if($res) {
     // header("Location: index.php");
-    echo true;
+    echo $res;
   } else {
     $_SESSION["badLogin"] = '<p style="color: red;">USERNAME OR PASSWORD IS INCORRECT!</p>';
     header("Location: login.php");
