@@ -20,9 +20,11 @@
 
 
   if($userLoginStatement->rowCount() > 0) {
-    echo "hello";
+     header("Location: index.php");
   } else {
-    echo "try again";
+    header("Email or Password is incorrect");
+    header("Location: login.php");
+
   }
 ?>
 

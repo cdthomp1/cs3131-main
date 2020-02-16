@@ -21,7 +21,12 @@
     <label>
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
     </label>
-
+    <?php 
+      if(headers_list() > 0) {
+        echo headers_list()[0];
+      }
+    
+    ?>
     <div class="clearfix">
     <button type="submit" class="signupbtn">Log In</button>
     </div>
