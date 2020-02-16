@@ -13,14 +13,14 @@
     $_SESSION["rememberMe"] = false;
   }
 
-  $userLoginStatement = $db->prepare('SELECT 1 FROM customer WHERE customer_email = :email and customer_password = :psw LIMIT 1');
+  $userLoginStatement = $db->prepare('SELECT FROM customer WHERE customer_email = :email and customer_password = :psw');
   $userLoginStatement->bindParam(':email', $_SESSION["email"]);
   $userLoginStatement->bindParam(':psw', $_SESSION["pass"]);
 
 
 
 
-  if($userLoginStatement->execute()) {
+  if($userLoginStatement->execute() > 1) {
     // header("Location: index.php");
     echo "res";
   } else {
