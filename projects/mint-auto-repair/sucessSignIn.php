@@ -13,7 +13,7 @@
     $_SESSION["rememberMe"] = false;
   }
 
-  if ('SELECT exists (SELECT 1 FROM customer WHERE customer_email = $_SESSION["email"] and customer_password = $_SESSION["pass"] LIMIT 1);') {
+  if ($db->query('SELECT exists (SELECT 1 FROM customer WHERE customer_email = $_SESSION["email"] and customer_password = $_SESSION["pass"] LIMIT 1)')) {
     echo "hello";
   }
 
@@ -21,4 +21,3 @@
 
 
 
-<!-- <?php header("Location: index.php"); ?> -->
