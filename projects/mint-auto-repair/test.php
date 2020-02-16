@@ -14,11 +14,16 @@
   $_SESSION["email"] = $_GET["email"];
   $_SESSION["name"] = $_GET["name"];
   $_SESSION["pass"] = $_GET["psw"];
+  $_SESSION["loggedIn"] = true;
+
+  if ($_GET["remember"] == "on") {
+      $_SESSION["rememberMe"] = true;
+  } else {
+    $_SESSION["rememberMe"] = false;
+  }
 
 ?>
 
-
-<a href="test2.php">TAKE ME TO THE REAL DATA</a>
 </body>
 </html>
 

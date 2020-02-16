@@ -15,6 +15,8 @@
 <p>Congradulations <?php echo $_SESSION["name"]?></p>
 <p>You have successfuly created an account with an email of: <?php echo $_SESSION["email"]?> and a password of: <?php echo $_SESSION["pass"]?></p>
 
+<a href="index.php">HOME</a>
+
 </body>
 </html>
 
