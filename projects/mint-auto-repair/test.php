@@ -8,6 +8,7 @@
 <body>
 <?php
   $email = $_GET["email"];
+  $name = $_GET["name"];
   $pass = $_GET["psw"];
 
 ?>
