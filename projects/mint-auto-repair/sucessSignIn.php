@@ -22,7 +22,9 @@
   $res = $userLoginStatement->execute();
   $userResults = $userLoginStatement->fetchALL(PDO::FETCH_ASSOC);
 
-  echo $userResults['customer_name'];
+foreach ($userResults as $user){
+  echo $user["customer_name"];
+}
 
 
 
