@@ -26,11 +26,7 @@
   $executeSuccess = $userLoginStatement->execute();
   $userResults = $userLoginStatement->fetchALL(PDO::FETCH_ASSOC);
 
-foreach ($userResults as $user){
-  echo $user["customer_name"];
-}
-
-
+  echo $userResults;
 
 /*   if($res == 1) {
     // header("Location: index.php");
