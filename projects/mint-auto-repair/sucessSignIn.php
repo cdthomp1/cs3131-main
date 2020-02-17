@@ -23,14 +23,8 @@
 
   $userLoginStatement = $db->query('SELECT FROM customer WHERE customer_email ='."'".$loggedInEmail."'".' and customer_password ='."'".$loggedInPassword."'");
 
-  $executeSuccess = $userLoginStatement->execute();
-  $userResults = $userLoginStatement->fetchALL(PDO::FETCH_ASSOC);
 
-  echo $userResults[0];
-
-foreach ($userResults as $user){
-  echo $user;
-}
+  echo $userLoginStatement[0];
 
 
 
