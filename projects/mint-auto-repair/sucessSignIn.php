@@ -22,8 +22,6 @@
 
 
   $userLoginStatement = $db->query('SELECT FROM customer WHERE customer_email ='."'".$loggedInEmail."'".' and customer_password ='."'".$loggedInPassword."'");
-  $userLoginStatement->bindParam(':email', $loggedInEmail);
-  $userLoginStatement->bindParam(':psw', $loggedInPassword);
 
   $executeSuccess = $userLoginStatement->execute();
   $userResults = $userLoginStatement->fetchALL(PDO::FETCH_ASSOC);
