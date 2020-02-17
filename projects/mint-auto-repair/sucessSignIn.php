@@ -28,6 +28,12 @@
 
   echo $userResults;
 
+foreach ($userResults as $user){
+  echo $user;
+}
+
+
+
 /*   if($res == 1) {
     // header("Location: index.php");
     echo "res";
