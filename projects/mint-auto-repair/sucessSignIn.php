@@ -26,7 +26,7 @@
   $executeSuccess = $userLoginStatement->execute();
   $userResults = $userLoginStatement->fetchALL(PDO::FETCH_ASSOC);
 
-  echo $userResults;
+  echo $userResults[0];
 
 foreach ($userResults as $user){
   echo $user;
