@@ -21,7 +21,7 @@
 
 
 
-  $userLoginStatement = $db->prepare('SELECT FROM customer WHERE customer_email = :email and customer_password = :psw');
+  $userLoginStatement = $db->query('SELECT FROM customer WHERE customer_email = :email and customer_password = :psw');
   $userLoginStatement->bindParam(':email', $loggedInEmail);
   $userLoginStatement->bindParam(':psw', $loggedInPassword);
 
@@ -34,14 +34,14 @@ foreach ($userResults as $user){
 
 
 
-  if($res == 1) {
+/*   if($res == 1) {
     // header("Location: index.php");
     echo "res";
   } else {
     $_SESSION["badLogin"] = '<p style="color: red;">USERNAME OR PASSWORD IS INCORRECT!</p>';
     //header("Location: login.php");
 
-  }
+  } */
 ?>
 
 
