@@ -22,7 +22,9 @@
   $res = $userLoginStatement->execute();
   $userResults = $userLoginStatement->fetchALL(PDO::FETCH_ASSOC);
 
-  echo $userResults;
+  echo $userResults['customer_name'];
+
+
 
   if($res == 1) {
     // header("Location: index.php");
