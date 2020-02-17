@@ -3,9 +3,15 @@
 
 <?php
   $_SESSION["email"] = $_GET["email"];
-  $_SESSION["name"] = $_GET["name"];
+  //$_SESSION["name"] = $_GET["name"];
   $_SESSION["pass"] = $_GET["psw"];
   $_SESSION["loggedIn"] = true;
+
+
+  $loggedInEmail = $_GET["email"];
+  //$_SESSION["name"] = $_GET["name"];
+  $loggedInPassword = $_GET["psw"];
+
 
   if ($_GET["remember"] == "on") {
       $_SESSION["rememberMe"] = true;
@@ -16,10 +22,10 @@
 
 
   $userLoginStatement = $db->prepare('SELECT FROM customer WHERE customer_email = :email and customer_password = :psw');
-  $userLoginStatement->bindParam(':email', $_SESSION["email"]);
-  $userLoginStatement->bindParam(':psw', $_SESSION["pass"]);
+  $userLoginStatement->bindParam(':email', $loggedInEmail);
+  $userLoginStatement->bindParam(':psw', $loggedInPassword);
 
-  $res = $userLoginStatement->execute();
+  $executeSuccess = $userLoginStatement->execute();
   $userResults = $userLoginStatement->fetchALL(PDO::FETCH_ASSOC);
 
 foreach ($userResults as $user){
