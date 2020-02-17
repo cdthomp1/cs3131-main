@@ -21,10 +21,15 @@
 
 
 
-  $userLoginStatement = $db->query('SELECT FROM customer WHERE customer_email ='."'".$loggedInEmail."'".' and customer_password ='."'".$loggedInPassword."'");
 
 
-  echo $userLoginStatement[0];
+  foreach ($db->query('SELECT * FROM customer') as $row) {
+    if ($row["customer_email"] == $loggedInEmail && $row["customer_password"]) {
+      echo $row["customer_name"];
+    } else {
+      echo '<p>FAILED LOGIN</p>';
+    }
+}
 
 
 
