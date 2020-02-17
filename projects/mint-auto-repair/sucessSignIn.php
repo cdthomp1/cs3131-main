@@ -21,6 +21,7 @@
 
 
 
+  echo 'SELECT customer_id, customer_name, customer_email FROM customer WHERE customer_email='."'".$loggedInEmail."'".' AND customer_password='."'".$loggedInPassword."'";
 
 
 
