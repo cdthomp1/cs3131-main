@@ -13,15 +13,18 @@
     $_SESSION["rememberMe"] = false;
   }
 
+
+
   $userLoginStatement = $db->prepare('SELECT FROM customer WHERE customer_email = :email and customer_password = :psw');
   $userLoginStatement->bindParam(':email', $_SESSION["email"]);
   $userLoginStatement->bindParam(':psw', $_SESSION["pass"]);
 
   $res = $userLoginStatement->execute();
+  $userResults = $userLoginStatement->fetchALL(PDO::FETCH_ASSOC);
 
-  echo $res;
+  echo $userResults;
 
-  if($res > 1) {
+  if($res == 1) {
     // header("Location: index.php");
     echo "res";
   } else {
