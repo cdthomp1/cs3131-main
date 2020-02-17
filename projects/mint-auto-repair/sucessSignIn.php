@@ -21,7 +21,7 @@
 
 
 
-  $userLoginStatement = $db->query('SELECT FROM customer WHERE customer_email = :email and customer_password = :psw');
+  $userLoginStatement = $db->query('SELECT FROM customer WHERE customer_email ='."'".$loggedInEmail."'".' and customer_password ='."'".$loggedInPassword."'");
   $userLoginStatement->bindParam(':email', $loggedInEmail);
   $userLoginStatement->bindParam(':psw', $loggedInPassword);
 
