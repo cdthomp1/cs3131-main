@@ -18,8 +18,8 @@
   echo $sql;
 
 
-/*   $res = $db->query($sql);
-  $rows = $rex->rowCount(); */
+  $res = $db->query($sql);
+  $rows = $rex->rowCount();
 
 
   echo $rows;
