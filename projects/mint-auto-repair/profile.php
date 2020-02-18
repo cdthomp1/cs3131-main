@@ -21,8 +21,18 @@
                 <?php echo $_SESSION['name'];?>
             </div>
             <div class="card-body">
-                <h5 class="card-title">{Appointment Type} @ {Appointment Date}</h5>
-                <p class="card-text">With {appointment_tech} for {appointment vehicle}. If this is your first appointment, please arrive 30 minutes early to meet with your service advisor, {servie advisor name}. </p>
+                <?php 
+                
+                $sql = "SELECT * FROM appointment WHERE appointment_id=1";
+
+                $sth = $db->query($sql);
+
+                $result = $sth->fetch(PDO::FETCH_ASSOC);
+
+                echo '<h5 class="card-title">'. $result['appointment_type'].' on'. $result['appointment_date'].' @ '. $result['appointment_time'].'</h5>';
+                echo '<p class="card-text">With'. $result['appointment_working_tech']. ' for '. $result['appointment_vehicle_id'] .'. If this is your first appointment, please arrive 30 minutes early to meet with your service advisor, '.$result['service_advisor_id'].' </p>';
+                ?>
+                
             </div>
         </div>
     </div>
