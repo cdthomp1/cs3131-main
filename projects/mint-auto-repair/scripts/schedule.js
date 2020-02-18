@@ -20,7 +20,7 @@ function changeColor(id) {
     if (pastID !== '') {
         //console.log("PAST " + pastID);
         document.getElementById(pastID).style.backgroundColor = '#dddddd';
-        document.getElementById(id).style.color = '#000000';
+        document.getElementById(pastID).style.color = '#000000';
     }
     
     pastID = id;
