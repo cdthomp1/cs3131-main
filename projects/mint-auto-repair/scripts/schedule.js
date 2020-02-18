@@ -11,12 +11,12 @@ function showDate(id) {
 
 function changeColor(id) {
     currentID = id;
-    console.log("CURRENT " + currentID);
-    console.log("PAST " + pastID);
     if (currentID !== pastID) {
+        console.log("CURRENT " + currentID);
         document.getElementById(id).style.backgroundColor = '#42989d';
     } 
-    if (pastID !== null) {
+    if (pastID !== '') {
+        console.log("PAST " + pastID);
         document.getElementById(pastID).style.backgroundColor = '#dddddd';
     }
     
