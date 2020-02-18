@@ -1,48 +1,30 @@
 <?php session_start(); ?>
-
+<?php include './dbConnect.php'; ?>
 
 <?php
-$_SESSION["email"] = $_POST["email"];
-//$_SESSION["name"] = $_GET["name"];
-$_SESSION["pass"] = $_POST["psw"];
-$_SESSION["loggedIn"] = true;
-
-try {
-  $dbUrl = getenv('DATABASE_URL');
-
-  $dbOpts = parse_url($dbUrl);
-
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"], '/');
-
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $ex) {
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
-
-$loggedInEmail = $_POST["email"];
-//$_SESSION["name"] = $_GET["name"];
-$loggedInPassword = $_POST["psw"];
+  $_SESSION["email"] = $_POST["email"];
+  //$_SESSION["name"] = $_GET["name"];
+  $_SESSION["pass"] = $_POST["psw"];
+  $_SESSION["loggedIn"] = true;
 
 
-$sql = "SELECT * FROM customer WHERE customer_email='" . $loggedInEmail . "' AND customer_password='" . $loggedInPassword . "' LIMIT 1";
+  $loggedInEmail = $_POST["email"];
+  //$_SESSION["name"] = $_GET["name"];
+  $loggedInPassword = $_POST["psw"];
 
 
-$res = pg_query($sql);
+  $sql = "SELECT * FROM customer WHERE customer_email='". $loggedInEmail . "' AND customer_password='".$loggedInPassword. "' LIMIT 1";
 
-echo pg_num_rows($res);
 
-if ($_GET["remember"] == "on") {
-  $_SESSION["rememberMe"] = true;
-} else {
-  $_SESSION["rememberMe"] = false;
-}
+  $res = $db->query($sql);
+
+  echo gettext($res);
+
+  if ($_GET["remember"] == "on") {
+      $_SESSION["rememberMe"] = true;
+  } else {
+    $_SESSION["rememberMe"] = false;
+  }
 
 
 
