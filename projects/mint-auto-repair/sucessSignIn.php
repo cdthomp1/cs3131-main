@@ -13,13 +13,13 @@
   $loggedInPassword = $_POST["psw"];
 
 
-  $sql = "SELECT * FROM customer WHERE customer_email='". $loggedInEmail . "' AND customer_password='".$loggedInPassword. "' LIMIT 1";
+  $sql = "SELECT * FROM customer WHERE customer_email='". $loggedInEmail . "' AND customer_password='".$loggedInPassword."'";
 
   echo $sql;
 
 
   $res = $db->query($sql);
-  $rows = $rex->rowCount();
+  $rows = $res->rowCount();
 
 
   echo $rows;
