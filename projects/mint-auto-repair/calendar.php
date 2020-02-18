@@ -4,12 +4,13 @@
 <html>
 
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:500&display=swap" rel="stylesheet">
     <link href="styles/calendar.css" type="text/css" rel="stylesheet" />
     <link href="styles/main.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-
+<div class="wrapper">
     <div class="scheduleForm">
         <form action="details.php">
             <label for="date">You would like to create an appointment on: </label><input id="date" type="text" name="date"><br />
@@ -55,7 +56,7 @@
         echo $calendar->show();
         ?>
     </div>
-
+    </div>
 
     <script src="scripts/schedule.js"></script>
 </body>

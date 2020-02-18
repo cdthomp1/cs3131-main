@@ -223,6 +223,12 @@ h2 {
     justify-content: space-evenly;
  }
  
+ .wrapper {
+     display: flex;
+     flex-direction: row;
+ }
+
+
  @media screen and (max-width: 450px){
     html, body {
       width: 100%;

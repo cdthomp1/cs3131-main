@@ -119,8 +119,3 @@ div#calendar{
   div.clear{
       clear:both;
   }  
-
-
-  .scheduleForm {
-      display: none;
-  }
