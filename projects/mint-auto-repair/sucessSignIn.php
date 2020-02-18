@@ -2,16 +2,23 @@
 <?php include './dbConnect.php'; ?>
 
 <?php
-  $_SESSION["email"] = $_GET["email"];
+  $_SESSION["email"] = $_POST["email"];
   //$_SESSION["name"] = $_GET["name"];
-  $_SESSION["pass"] = $_GET["psw"];
+  $_SESSION["pass"] = $_POST["psw"];
   $_SESSION["loggedIn"] = true;
 
 
-  $loggedInEmail = $_GET["email"];
+  $loggedInEmail = $_POST["email"];
   //$_SESSION["name"] = $_GET["name"];
-  $loggedInPassword = $_GET["psw"];
+  $loggedInPassword = $_POST["psw"];
 
+
+  $sql = "SELECT * FROM customer WHERE customer_email='". $loggedInEmail . "' AND customer_password='".$loggedInPassword. "' LIMIT 1";
+
+
+  $res = $db->query($sql);
+
+  echo pg_num_rows($res);
 
   if ($_GET["remember"] == "on") {
       $_SESSION["rememberMe"] = true;
@@ -23,31 +30,6 @@
 
 /*   echo 'SELECT customer_id, customer_name, customer_email FROM customer WHERE customer_email='."'".$loggedInEmail."'".' AND customer_password='."'".$loggedInPassword."'"; */
 
-$res = $db->query('SELECT customer_id, customer_name, customer_email, customer_password FROM customer WHERE customer_email='."'".$loggedInEmail."'".' AND customer_password='."'".$loggedInPassword."'");
-
-echo $res;
-/* 
-if (2) {
-  foreach ($db->query('SELECT customer_id, customer_name, customer_email, customer_password FROM customer WHERE customer_email='."'".$loggedInEmail."'".' AND customer_password='."'".$loggedInPassword."'") as $row){
-    echo $row["customer_name"];
-  }
-} else {
-  echo '<p>FAILED LOGIN</p>';
-
-} */
-
-
-
-
-
-/*   if($res == 1) {
-    // header("Location: index.php");
-    echo "res";
-  } else {
-    $_SESSION["badLogin"] = '<p style="color: red;">USERNAME OR PASSWORD IS INCORRECT!</p>';
-    //header("Location: login.php");
-
-  } */
 ?>
 
 
