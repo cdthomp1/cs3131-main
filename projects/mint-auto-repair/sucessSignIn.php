@@ -21,6 +21,12 @@
   $res = $db->query($sql);
   $rows = $res->rowCount();
 
+  if ($rows == 1) {
+    echo "welcome" . $loggedInEmail;
+  } else {
+    header("Location: login.php?error=Username%20or%20password%20incorrect");
+  }
+
 
   echo $rows;
 
