@@ -18,7 +18,7 @@
 
   $res = $db->query($sql);
 
-  echo gettext($res);
+  echo gettype($res);
 
   if ($_GET["remember"] == "on") {
       $_SESSION["rememberMe"] = true;
