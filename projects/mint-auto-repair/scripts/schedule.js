@@ -11,6 +11,8 @@ function showDate(id) {
 
 function changeColor(id) {
     currentID = id;
+    console.log("CURRENT " + currentID);
+    console.log("PAST " + pastID);
     if (currentID !== pastID) {
         document.getElementById(id).style.backgroundColor = '#42989d';
     } else {
