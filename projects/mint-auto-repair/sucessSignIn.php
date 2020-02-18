@@ -17,8 +17,10 @@
 
 
   $res = $db->query($sql);
+  $rows = $rex->rowCount();
 
-  echo gettype($res);
+
+  echo $rows;
 
   if ($_GET["remember"] == "on") {
       $_SESSION["rememberMe"] = true;
