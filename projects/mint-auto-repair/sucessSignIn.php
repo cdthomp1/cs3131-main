@@ -23,30 +23,9 @@ $rows = $sth->rowCount();
 
 
 if ($rows == 1) {
-  /* Exercise PDOStatement::fetch styles */
-  print("PDO::FETCH_ASSOC: ");
-  print("Return next row as an array indexed by column name\n");
   $result = $sth->fetch(PDO::FETCH_ASSOC);
-  print_r($result);
-  print("\n");
+  echo '<p>Welcome '. $result["customer_name"] . "!";
 
-  print("PDO::FETCH_BOTH: ");
-  print("Return next row as an array indexed by both column name and number\n");
-  $result = $sth->fetch(PDO::FETCH_BOTH);
-  print_r($result);
-  print("\n");
-
-  print("PDO::FETCH_LAZY: ");
-  print("Return next row as an anonymous object with column names as properties\n");
-  $result = $sth->fetch(PDO::FETCH_LAZY);
-  print_r($result);
-  print("\n");
-
-  print("PDO::FETCH_OBJ: ");
-  print("Return next row as an anonymous object with column names as properties\n");
-  $result = $sth->fetch(PDO::FETCH_OBJ);
-  print $result->name;
-  print("\n");
 } else {
   header("Location: login.php?error=Username%20or%20password%20incorrect");
 }
