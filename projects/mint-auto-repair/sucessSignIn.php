@@ -23,23 +23,18 @@
 
 /*   echo 'SELECT customer_id, customer_name, customer_email FROM customer WHERE customer_email='."'".$loggedInEmail."'".' AND customer_password='."'".$loggedInPassword."'"; */
 
-
-if ($db->query('SELECT customer_id, customer_name, customer_email, customer_password FROM customer WHERE customer_email='."'".$loggedInEmail."'".' AND customer_password='."'".$loggedInPassword."'")) {
+$res = $db->query('SELECT customer_id, customer_name, customer_email, customer_password FROM customer WHERE customer_email='."'".$loggedInEmail."'".' AND customer_password='."'".$loggedInPassword."'");
+/* 
+if (2) {
   foreach ($db->query('SELECT customer_id, customer_name, customer_email, customer_password FROM customer WHERE customer_email='."'".$loggedInEmail."'".' AND customer_password='."'".$loggedInPassword."'") as $row){
     echo $row["customer_name"];
   }
 } else {
   echo '<p>FAILED LOGIN</p>';
 
-}
+} */
 
-  foreach ($db->query('SELECT customer_id, customer_name, customer_email, customer_password FROM customer WHERE customer_email='."'".$loggedInEmail."'".' AND customer_password='."'".$loggedInPassword."'") as $row) {
-    if ($row["customer_email"] == $loggedInEmail && $row["customer_password"]) {
-      echo $row["customer_name"];
-    } else {
-      echo '<p>FAILED LOGIN</p>';
-    }
-}
+
 
 
 
