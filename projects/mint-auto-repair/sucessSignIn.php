@@ -16,6 +16,7 @@ if ($rows == 1) {
   $_SESSION["email"] = $result["customer_email"];
   $_SESSION["name"] = $result["customer_name"];
   $_SESSION["loggedIn"] = true;
+  header("Location: index.php");
 } else {
   $_SESSION["badLogin"] = '<p class="error">USERNAME OR PASSWORD IS INCORRECT!</p>';
   header("Location: login.php");

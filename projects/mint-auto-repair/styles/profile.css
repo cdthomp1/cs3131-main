@@ -1,0 +1,24 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+.card-header {
+    font-size: 24px;
+    background-color: #429e9d;
+    color: white;
+    
+}
+
+.profileContainer {
+    box-shadow: 1px 5px 22px 0px rgba(66, 158, 157, 0.461);
+    width: 25%;
+    margin: auto;
+    margin-top: 75px;
+}
+
+.nav {
+    padding: 10px;
+}
