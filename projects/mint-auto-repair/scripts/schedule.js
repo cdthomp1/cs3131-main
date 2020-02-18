@@ -12,12 +12,15 @@ function showDate(id) {
 function changeColor(id) {
     currentID = id;
     if (currentID !== pastID) {
-        console.log("CURRENT " + currentID);
-        document.getElementById(id).style.backgroundColor = '#42989d';
+       // console.log("CURRENT " + currentID);
+       document.getElementById(id).style.backgroundColor = '#42989d';
+       document.getElementById(id).style.color = '#ffffff';
+
     } 
     if (pastID !== '') {
-        console.log("PAST " + pastID);
+        //console.log("PAST " + pastID);
         document.getElementById(pastID).style.backgroundColor = '#dddddd';
+        document.getElementById(id).style.color = '#000000';
     }
     
     pastID = id;
