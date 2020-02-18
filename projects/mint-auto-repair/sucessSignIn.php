@@ -18,6 +18,8 @@ $sql = "SELECT * FROM customer WHERE customer_email='" . $loggedInEmail . "' AND
 
 
 $sth = $db->query($sql);
+$rows = $sth->rowCount();
+
 
 
 if ($rows == 1) {
