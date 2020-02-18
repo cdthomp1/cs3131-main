@@ -27,11 +27,10 @@ if ($rows == 1) {
   echo '<p>Welcome '. $result["customer_name"] . "!";
 
 } else {
-  header("Location: login.php?error=Username%20or%20password%20incorrect");
+  $_SESSION["badLogin"] = '<p class="error">USERNAME OR PASSWORD IS INCORRECT!</p>';
+  header("Location: login.php");
 }
 
-
-echo $rows;
 
 if ($_GET["remember"] == "on") {
   $_SESSION["rememberMe"] = true;

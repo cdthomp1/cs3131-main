@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/signup.css">
+    <link rel="stylesheet" href="styles/user.css">
     <title>Mint Auto Repair</title>
 </head>
 <body>
@@ -38,8 +38,7 @@
 
     <div class="clearfix">
       <button type="submit" class="signupbtn">Sign Up</button>
-      <span>OR</span>
-      <a href="login.php" class="signupbtn">Log In</a>
+      <p>Already a Customer? <a href="login.php" >Log In here</a>!</p>
     </div>
   </div>
 </form>
