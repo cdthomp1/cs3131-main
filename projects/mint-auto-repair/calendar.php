@@ -5,36 +5,31 @@
 
 <head>
     <link href="styles/calendar.css" type="text/css" rel="stylesheet" />
+    <link href="styles/main.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-    <?php
-    include 'cal.php';
 
-    $calendar = new Calendar();
-
-    echo $calendar->show();
-    ?>
     <div class="scheduleForm">
         <form action="details.php">
             <label for="date">You would like to create an appointment on: </label><input id="date" type="text" name="date"><br />
-            <?php echo '<label for="name">What is your name? </label><input id="name" value="' . $_SESSION["name"]. '" type="text" name="name"></br />' ?>            
+            <?php echo '<label for="name">What is your name? </label><input id="name" value="' . $_SESSION["name"] . '" type="text" name="name"></br />' ?>
             <label for="time">What time?</label><input id="time" type="time" name="time"><br />
 
 
             <label for="tech">Who would you like to work on your car? </label><select id="tech" name="tech">
-            <?php
+                <?php
                 foreach ($db->query("SELECT * FROM vehicle WHERE customer_id=1") as $row) {
-                    echo '<option value="'.$row['vehicle_id'].'">'. $row['vehicle_make'].' '. $row['vehicle_model'].'</option>';
+                    echo '<option value="' . $row['vehicle_id'] . '">' . $row['vehicle_make'] . ' ' . $row['vehicle_model'] . '</option>';
                 }
-            ?>
-            </select><br />     
+                ?>
+            </select><br />
 
             <label for="tech">Who would you like to work on your car? </label><select id="tech" name="tech"><?php
-foreach ($db->query("SELECT * FROM employees WHERE employee_position='Technician'") as $row) {
-    echo '<option value="'.$row['employee_name'].'">'. $row['employee_name'].'</option>';
-}
-?>
+                                                                                                            foreach ($db->query("SELECT * FROM employees WHERE employee_position='Technician'") as $row) {
+                                                                                                                echo '<option value="' . $row['employee_name'] . '">' . $row['employee_name'] . '</option>';
+                                                                                                            }
+                                                                                                            ?>
             </select><br />
 
 
@@ -51,6 +46,17 @@ foreach ($db->query("SELECT * FROM employees WHERE employee_position='Technician
             <button type="submit">Create Appointment!</button>
         </form>
     </div>
+    <div id="calendar">
+        <?php
+        include 'cal.php';
+        $calendar = new Calendar();
+
+
+        echo $calendar->show();
+        ?>
+    </div>
+
+
     <script src="scripts/schedule.js"></script>
 </body>
 
