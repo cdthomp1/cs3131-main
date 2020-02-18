@@ -16,7 +16,7 @@
   $sql = "SELECT * FROM customer WHERE customer_email='". $loggedInEmail . "' AND customer_password='".$loggedInPassword. "' LIMIT 1";
 
 
-  $res = pg_query($db, $sql);
+  $res = pg_query($sql);
 
   echo pg_num_rows($res);
 
