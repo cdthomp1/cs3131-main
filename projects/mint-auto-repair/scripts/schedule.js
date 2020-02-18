@@ -15,8 +15,9 @@ function changeColor(id) {
     console.log("PAST " + pastID);
     if (currentID !== pastID) {
         document.getElementById(id).style.backgroundColor = '#42989d';
-    } else {
-        document.getElementById(pastID).style.backgroundColor = '#dddddd';
-    }
+    } 
+    
+    document.getElementById(pastID).style.backgroundColor = '#dddddd';
+    
     pastID = id;
 }
