@@ -10,7 +10,7 @@
     <title>Mint Auto Repair</title>
 </head>
 <body>
-    <form action="sucessSignIn.php" style="border:1px solid #ccc">
+    <form action="sucessSignIn.php" style="border:1px solid #ccc" method="post">
   <div class="container">
     <h1>Log In</h1>
     <label for="email"><b>Email</b></label>
