@@ -6,7 +6,8 @@ function showDate(id) {
     changeColor(id);
     var dateField = document.getElementById("date");
     var date = id.replace(/([a-z])\w-+/g, "");
-    dateField.value = date;
+    var dateArr = date.split("-");
+    dateField.value = dateArr[1] + "-" + dateArr[2] + "-" + dateArr[0];
 
 }
 
