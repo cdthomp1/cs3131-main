@@ -24,7 +24,7 @@
                 $calendar = new Calendar();
                 echo $calendar->show();
                 ?>
-                <p class='dateChosen'></p>
+                <p id='dateChosen'></p>
             </div>
         </div>
         <div class="timeChooser"></div>
