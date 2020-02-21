@@ -43,9 +43,9 @@
       <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
       <div class="clearfix">
-        <button type="submit" class="signupbtn">Sign Up</button><br>
-        <p>Already a Customer? <a href="login.php">Log In here</a>!</p>
+        <button type="submit" class="signupbtn">Sign Up</button>
       </div>
+      <p>Already a Customer? <a href="login.php">Log In here</a>!</p>
     </div>
   </form>
 </body>
