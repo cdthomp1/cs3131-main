@@ -4,10 +4,10 @@ var pastID = '';
 function showDate(id) {
     if (checkIfPassed(id)) {
         changeColor(id);
-        var dateField = document.getElementById("date");
+        var dateField = document.getElementById("dateChosen");
         var date = id.replace(/([a-z])\w-+/g, "");
         var dateArr = date.split("-");
-        dateField.value = dateArr[1] + "-" + dateArr[2] + "-" + dateArr[0];
+        dateField.innerText = "The Date you have chosen is: " + dateArr[1] + "-" + dateArr[2] + "-" + dateArr[0];
     }
 
 }
