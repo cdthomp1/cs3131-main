@@ -91,14 +91,21 @@ h2 {
     padding: 20px 0px 20px 40px;
 }
 
-.links {
+.links_container {
     justify-content: flex-end;
     color: white;
     padding: 35px 40px 0px 0px;
     font-size: 30px;
     display: flex;
-    justify-content: space-between;
-    width: 325px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+.link {
+    padding: 0px 10px 0px 10px;
 }
 
 .link a {
@@ -173,7 +180,7 @@ h2 {
     box-sizing: border-box;
 
     margin: 4px;
-  flex: 1 1 calc(20% - 8px);
+    flex: 1 1 calc(20% - 8px);
 }
 
 .testi .profile {
@@ -194,7 +201,7 @@ h2 {
     text-align: center;
 }
 
-.clientReviewHeader{
+.clientReviewHeader {
     font-size: 25px;
     margin-top: 120px;
 }
@@ -205,7 +212,7 @@ h2 {
 
 }
 
-.review{
+.review {
     overflow: hidden;
     height: auto;
     text-align: center;
@@ -221,17 +228,19 @@ h2 {
     color: white;
     display: flex;
     justify-content: space-evenly;
- }
- 
- .wrapper {
-     display: flex;
-     flex-direction: row;
- }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
 
 
- @media screen and (max-width: 450px){
-    html, body {
-      width: 100%;
+@media screen and (max-width: 450px) {
+
+    html,
+    body {
+        width: 100%;
     }
 
     .hero-image {
@@ -240,7 +249,8 @@ h2 {
         background-size: cover;
     }
 
-    .companyName, .link{ 
+    .companyName,
+    .link {
         font-size: 25px;
     }
 
@@ -254,12 +264,16 @@ h2 {
         justify-content: space-around;
     }
 
-    .navBar{
-        text-align: center;
+    .links {
+        align-content: flex-end;
+    }
+
+    .navBar {
+        display: flex;
         flex-direction: column;
     }
 
-     .hero-image {
+    .hero-image {
         width: 100%;
         position: relative;
     }
@@ -272,6 +286,7 @@ h2 {
         height: auto;
         left: 52px;
     }
+
     .infoBox .box:nth-child(-n + 2) {
         border: none;
     }
@@ -318,6 +333,7 @@ h2 {
     .testi .profile {
         width: 55%;
     }
+
     .clientReviewHeader {
         margin: 0;
     }
@@ -327,4 +343,4 @@ h2 {
         flex-direction: column;
         align-items: center;
     }
-  }
+}

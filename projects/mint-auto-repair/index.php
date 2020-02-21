@@ -18,16 +18,17 @@
     <div class="hero-image">
         <div class="navBar">
             <div class="companyName">Mint Auto Repair</div>
-            <div class="links">
-
-                <?php
-                if ($_SESSION["loggedIn"] != true) {
-                    echo '<div class="link"><a href="user.php">Login</a></div>';
-                } else {
-                    echo '<div class="link"><a href="calendar.php">Schedule</a></div>';
-                    echo '<div class="link"><a href="profile.php">Profile</a></div>';
-                }
-                ?>
+            <div class="links_container">
+                <div class="links">
+                    <?php
+                    if ($_SESSION["loggedIn"] != true) {
+                        echo '<div class="link"><a href="user.php">Login</a></div>';
+                    } else {
+                        echo '<div class="link"><a href="calendar.php">Schedule</a></div>';
+                        echo '<div class="link"><a href="profile.php">Profile</a></div>';
+                    }
+                    ?>
+                </div>
             </div>
         </div>
         <div class="hero-text">
