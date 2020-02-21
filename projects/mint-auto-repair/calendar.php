@@ -18,11 +18,20 @@
                 <h2>Welcome <?php echo $_SESSION["name"] ?><h3>Mint is excited to work with you and your vehicle. Lets begin.</h3>
                 <?php 
                 
-                $sql = "SELECT appointment_date FROM appointment where appointment_date > '2020-03-25'";
+                $sql = "SELECT appointment_date FROM appointment where appointment_date > '2020-03-23'";
                 
                 $sth = $db->query($sql);
                 $result = $sth->fetch(PDO::FETCH_ASSOC);
-                echo $result['appointment_date'];
+
+                $rows = $sth->rowCount();
+
+                if ($rows > 1) {
+                    foreach($result as $res) {
+                        echo $res["appointment_date"];
+                    }
+                } else {
+                    echo $result['appointment_date'];                    
+                }
                 ?>
             </div>
             <div class="dateChooser">
