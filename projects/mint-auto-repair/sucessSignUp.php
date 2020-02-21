@@ -22,7 +22,7 @@ if ($rows == 1) {
   echo "Someone Has that email";
   $_SESSION["dupEmail"] = true;
   header("Location: user.php");
-} else if (preg_match('/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/', $_SESSION["email"] == 0)) {
+} else if (preg_match('/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/', $_SESSION["email"] == '0')) {
   $_SESSION["badEmail"] = true;
   header("Location: user.php");
 }
