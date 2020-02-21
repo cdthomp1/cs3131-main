@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <div class="navBar">
         <div class="companyName"><a href="index.php">Mint Auto Repair</a></div>
         <div class="links_container">
