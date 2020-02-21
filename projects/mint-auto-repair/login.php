@@ -10,6 +10,21 @@
     <title>Mint Auto Repair</title>
 </head>
 <body>
+<div class="navBar">
+            <div class="companyName">Mint Auto Repair</div>
+            <div class="links_container">
+                <div class="links">
+                    <?php
+                    if ($_SESSION["loggedIn"] != true) {
+                        echo '<div class="link"><a href="user.php">Login</a></div>';
+                    } else {
+                        echo '<div class="link"><a href="calendar.php">Schedule</a></div>';
+                        echo '<div class="link"><a href="profile.php">Profile</a></div>';
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
     <form action="sucessSignIn.php" style="border:1px solid #ccc" method="post">
   <div class="container">
     <h1>Log In</h1>

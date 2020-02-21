@@ -9,7 +9,7 @@ html {
     font-size: 24px;
     background-color: #429e9d;
     color: white;
-    
+
 }
 
 .profileContainer {
@@ -19,6 +19,15 @@ html {
     margin-top: 75px;
 }
 
-.nav {
-    padding: 10px;
+.companyName {
+    color: #429e9d;
+}
+
+
+.link a{
+    color: #429e9d;
+}
+
+.link a:hover {
+    color: #32726f;
 }

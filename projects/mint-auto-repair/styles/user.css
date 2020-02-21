@@ -66,6 +66,14 @@ button:hover {
   color: rgb(116, 51, 51);
 }
 
+.link a{
+  color: #429e9d;
+}
+
+.link a:hover {
+  color: #32726f;
+}
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
