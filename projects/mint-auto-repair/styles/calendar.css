@@ -121,9 +121,10 @@ div.clear {
     clear: both;
 }
 
-.companyName {
+.companyName a{
+    text-decoration: none;
     color: #429e9d;
-}
+  }
 
 .link a {
     color: #429e9d;
