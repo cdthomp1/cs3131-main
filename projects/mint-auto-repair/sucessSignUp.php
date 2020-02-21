@@ -25,6 +25,8 @@ if ($rows == 1) {
 } else if (!filter_var($_SESSION["email"], FILTER_VALIDATE_EMAIL)) {
   $_SESSION["badEmail"] = true;
   header("Location: user.php");
+} else {
+  header("Location: index.php");
 }
 
 
@@ -36,7 +38,3 @@ if ($rows == 1) {
   $executeSuccess = $singUpUser->execute(); */
 
 ?>
-
-
-
-<?php /* header("Location: index.php"); */ ?>
