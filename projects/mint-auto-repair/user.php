@@ -15,15 +15,7 @@
 </head>
 
 <body>
-    <div class="navBar">
-        <div class="companyName"><a href="index.php">Mint Auto Repair</a></div>
-        <div class="links_container">
-            <div class="links">
-                <div class="link"><a href="schedule.html">Schedule</a></div>
-                <div class="link"><a href="login.html">Login</a></div>
-            </div>
-        </div>
-    </div>
+<?php include './navbar.php'; ?>
 
 
     <form action="sucessSignUp.php" style="border:1px solid #ccc">
@@ -70,7 +62,7 @@
             <p>Already a Customer? <a href="login.php">Log In here</a>!</p>
         </div>
     </form>
-
+    <?php include './footer.php'; ?>
     <script src="scripts/script.js"></script>
 </body>
 

@@ -30,11 +30,11 @@ if ($rows == 1) {
 }
 
 
-/* 
+
   $singUpUser = $db->prepare('INSERT INTO customer (customer_name, customer_email, customer_password) VALUES (:cname, :email, :psw)');
   $singUpUser->bindParam(':cname', $_SESSION["name"]);
   $singUpUser->bindParam(':email', $_SESSION["email"]);
   $singUpUser->bindParam(':psw', $_SESSION["pass"]);
-  $executeSuccess = $singUpUser->execute(); */
+  $executeSuccess = $singUpUser->execute();
 
 ?>
