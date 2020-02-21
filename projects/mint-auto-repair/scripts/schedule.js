@@ -3,11 +3,12 @@ var pastID = '';
 
 function showDate(id) {
     checkIfPassed(id);
-    changeColor(id);
-    var dateField = document.getElementById("date");
-    var date = id.replace(/([a-z])\w-+/g, "");
-    var dateArr = date.split("-");
-    dateField.value = dateArr[1] + "-" + dateArr[2] + "-" + dateArr[0];
+    if (changeColor(id)) {
+        var dateField = document.getElementById("date");
+        var date = id.replace(/([a-z])\w-+/g, "");
+        var dateArr = date.split("-");
+        dateField.value = dateArr[1] + "-" + dateArr[2] + "-" + dateArr[0];
+    }
 
 }
 
@@ -20,6 +21,10 @@ function checkIfPassed(id) {
     var lastDate = d.getDate() - 1;
     if (dateArr[2] < lastDate + 1) {
         alert ("Please Select a day that is after the " + lastDate);
+        return false;
+    }
+    else {
+        return true;
     }
 }
 
