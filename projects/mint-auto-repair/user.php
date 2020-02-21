@@ -40,6 +40,11 @@
 
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" required>
+            <?php 
+              if ($_SESSION["dupEmail"] == true) {
+                echo '<p class="warn>Email Already Used!</p>';
+              }
+            ?>
 
             <label for="psw"><b>Password</b></label>
             <p class="passwordNote">You know how strong a password should be, so make it your's. No legnth, number, character requirements.</p>

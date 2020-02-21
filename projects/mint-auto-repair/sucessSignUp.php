@@ -20,6 +20,8 @@ $rows = $sth->rowCount();
 
 if ($rows == 1) {
   echo "Someone Has that email";
+  $_SESSION["dupEmail"] = true;
+  header("Location: user.php");
 } else {
   echo "GOOD EMAIL!";
 }
