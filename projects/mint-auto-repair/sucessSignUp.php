@@ -29,6 +29,9 @@ if ($rows == 1) {
 
 echo "REGEX VALUE" . preg_match('/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/', $_SESSION["email"]);
 
+echo preg_match('/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/', $_SESSION["email"]) == 0;
+echo preg_match('/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/', $_SESSION["email"]) == '0';
+
 /* 
   $singUpUser = $db->prepare('INSERT INTO customer (customer_name, customer_email, customer_password) VALUES (:cname, :email, :psw)');
   $singUpUser->bindParam(':cname', $_SESSION["name"]);
