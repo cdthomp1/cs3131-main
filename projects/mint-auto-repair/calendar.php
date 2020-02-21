@@ -21,7 +21,7 @@
                 $sql = "SELECT appointment_date FROM appointment where appointment_date > '2020-03-23'";
                 
                 $sth = $db->query($sql);
-                $result = $sth->fetch(PDO::FETCH_ASSOC);
+                $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
                 $rows = $sth->rowCount();
 
