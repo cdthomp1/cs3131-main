@@ -24,7 +24,7 @@
             <div class="card-body">
                 <?php 
                 
-                $sql = "SELECT a.appointment_id, a.appointment_date, a.appointment_time, a.appointmet_type, v.vehicle_make, v.vehicle_model, e.employee_name, es.employee_name 
+                $sql = "SELECT a.appointment_id, a.appointment_date, a.appointment_time, a.appointmet_type, v.vehicle_make, v.vehicle_model, e.employee_name AS technician, es.employee_name AS service_advisor
                 FROM appointment a 
                     JOIN vehicle v ON a.appointment_vehicle_id = v.vehicle_id  
                     JOIN customer c ON a.appointment_customer_id = c.customer_id 
@@ -37,7 +37,7 @@
                 $result = $sth->fetch(PDO::FETCH_ASSOC);
 
                 echo '<h5 class="card-title">'. $result['appointmet_type'].' on '. $result['appointment_date'].' @ '. $result['appointment_time'].'</h5>';
-                echo '<p class="card-text">With '. $result['employee_name']. ' for '. $result['vehicle_make']. ' ' .$result['vehicle_model'] .'. Please arrive 30 minutes early to meet with your service advisor about your service needs. Your advisor is, '.$result['employee_name'].' </p>';
+                echo '<p class="card-text">With '. $result['technician']. ' for '. $result['vehicle_make']. ' ' .$result['vehicle_model'] .'. Please arrive 30 minutes early to meet with your service advisor about your service needs. Your advisor is, '.$result['service_advisor'].' </p>';
                 ?>
                 
             </div>
