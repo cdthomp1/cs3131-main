@@ -13,15 +13,19 @@
     $_SESSION["rememberMe"] = false;
   }
 
+  if ($db->query('SELECT * from customer  WHERE customer_email = "camthomp96@gmail.com" limit 1; ')){
+    echo "Someone Has that email";
+  }
 
+/* 
   $singUpUser = $db->prepare('INSERT INTO customer (customer_name, customer_email, customer_password) VALUES (:cname, :email, :psw)');
   $singUpUser->bindParam(':cname', $_SESSION["name"]);
   $singUpUser->bindParam(':email', $_SESSION["email"]);
   $singUpUser->bindParam(':psw', $_SESSION["pass"]);
-  $executeSuccess = $singUpUser->execute();
+  $executeSuccess = $singUpUser->execute(); */
   
 ?>
 
 
 
-<?php header("Location: index.php"); ?>
+<?php /* header("Location: index.php"); */ ?>
