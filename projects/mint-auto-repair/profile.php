@@ -28,7 +28,7 @@
                 JOIN vehicle v ON a.appointment_vehicle_id = v.vehicle_id  
                 JOIN employees e ON a.appointment_working_tech_id = e.employee_id
                 JOIN employees es ON a.service_advisor_id = es.employee_id
-                WHERE  = '".$_SESSION["name"]."'";
+                WHERE c.customer_name = '".$_SESSION["name"]."'";
 
                 $sth = $db->query($sql);
 
