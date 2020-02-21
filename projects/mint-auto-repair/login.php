@@ -14,8 +14,8 @@
 </head>
 
 <body>
-<?php include './navbar.php'; ?>
-  <form action="sucessSignIn.php" style="border:1px solid #ccc" method="post">
+  <?php include './navbar.php'; ?>
+  <form action="sucessSignIn.php" method="post">
     <div class="container">
       <h1>Log In</h1>
       <label for="email"><b>Email</b></label>
@@ -37,6 +37,8 @@
       </div>
     </div>
   </form>
+  <?php include './footer.php'; ?>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
