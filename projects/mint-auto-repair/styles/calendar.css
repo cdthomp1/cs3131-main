@@ -121,6 +121,10 @@ div.clear {
     clear: both;
 }
 
+.companyName {
+    color: #429e9d;
+}
+
 .link a {
     color: #429e9d;
 }

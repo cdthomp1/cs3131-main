@@ -66,6 +66,10 @@ button:hover {
   color: rgb(116, 51, 51);
 }
 
+.companyName {
+  color: #429e9d;
+}
+
 .link a{
   color: #429e9d;
 }
