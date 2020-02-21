@@ -25,9 +25,9 @@
 
                 $rows = $sth->rowCount();
 
+                print_r($result);
                 if ($rows > 1) {
                     echo "PASSED IF STATEMENT";
-                    print_r($result);
                     foreach($result as $res) {
                         print_r($res);
                     }
