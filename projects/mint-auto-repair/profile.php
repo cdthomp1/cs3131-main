@@ -37,7 +37,7 @@
                 $result = $sth->fetch(PDO::FETCH_ASSOC);
 
                 echo '<h5 class="card-title">'. $result['appointmet_type'].' on '. $result['appointment_date'].' @ '. $result['appointment_time'].'</h5>';
-                //echo '<p class="card-text">With '. $result['appointment_working_tech_id']. ' for '. $result['appointment_vehicle_id'] .'. Please arrive 30 minutes early to meet with your service advisor about your service needs. Your advisor is, '.$result['service_advisor_id'].' </p>';
+                echo '<p class="card-text">With '. $result['employee_name']. ' for '. $result['vehicle_make']. ' ' .$result['vehicle_model'] .'. Please arrive 30 minutes early to meet with your service advisor about your service needs. Your advisor is, '.$result['employee_name'].' </p>';
                 ?>
                 
             </div>
