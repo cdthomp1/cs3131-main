@@ -15,7 +15,7 @@
     <div class="wrapper">
         <div class="scheduleForm">
             <div class="welcome">
-                <h2>Welcome <?php $_SESSION["name"] ?><h3>Mint is excited to work with you and your vehicle. Lets begin.</h3>
+                <h2>Welcome <?php echo $_SESSION["name"] ?><h3>Mint is excited to work with you and your vehicle. Lets begin.</h3>
             </div>
             <div class="dateChooser">
                 <h3>Please Select a date for your appointment</h3>
