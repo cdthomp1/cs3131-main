@@ -16,6 +16,7 @@
         <div class="scheduleForm">
             <div class="welcome">
                 <h2>Welcome <?php echo $_SESSION["name"] ?><h3>Mint is excited to work with you and your vehicle. Lets begin.</h3>
+                <?php echo $db->query('SELECT appointment_date FROM appointment where appointment_customer_id = 1')?>
             </div>
             <div class="dateChooser">
                 <h3>Please Select a date for your appointment</h3>
@@ -26,12 +27,12 @@
                 ?>
                 <p id='dateChosen'></p>
             </div>
+            <div class="timeChooser"></div>
+            <div class="vehicleChooser"></div>
+            <div class="techChooser"></div>
+            <div class="typChooser"></div>
+            <div class="createButton"></div>
         </div>
-        <div class="timeChooser"></div>
-        <div class="vehicleChooser"></div>
-        <div class="techChooser"></div>
-        <div class="typChooser"></div>
-        <div class="createButton"></div>
         <form action="details.php">
             <label for="date">You would like to create an appointment on: </label><input id="date" type="text" name="date"><br />
             <?php echo '<label for="name">What is your name? </label><input id="name" value="' . $_SESSION["name"] . '" type="text" name="name"></br />' ?>
