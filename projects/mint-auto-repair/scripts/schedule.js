@@ -2,8 +2,8 @@ var currentID = '';
 var pastID = '';
 
 function showDate(id) {
-    checkIfPassed(id);
-    if (changeColor(id)) {
+    if (checkIfPassed(id)) {
+        changeColor(id);
         var dateField = document.getElementById("date");
         var date = id.replace(/([a-z])\w-+/g, "");
         var dateArr = date.split("-");
