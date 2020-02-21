@@ -27,6 +27,8 @@ if ($rows == 1) {
   header("Location: user.php");
 }
 
+echo preg_match('^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$', $_SESSION["email"]);
+
 /* 
   $singUpUser = $db->prepare('INSERT INTO customer (customer_name, customer_email, customer_password) VALUES (:cname, :email, :psw)');
   $singUpUser->bindParam(':cname', $_SESSION["name"]);
