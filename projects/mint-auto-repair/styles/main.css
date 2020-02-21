@@ -231,11 +231,6 @@ h2 {
     color: white;
     display: flex;
     justify-content: space-evenly;
-
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
 }
 
 .wrapper {
