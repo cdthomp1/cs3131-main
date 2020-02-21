@@ -13,7 +13,7 @@
     $_SESSION["rememberMe"] = false;
   }
 
-  if ($db->query('SELECT * from customer  WHERE customer_email = "camthomp96@gmail.com" limit 1; ')){
+  if ($db->query("SELECT * from customer WHERE customer_email ='".$_SESSION["email"] . "'  limit 1")){
     echo "Someone Has that email";
   }
 
