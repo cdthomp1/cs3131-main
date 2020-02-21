@@ -18,7 +18,7 @@
 <?php include './navbar.php'; ?>
 
 
-    <form action="sucessSignUp.php" style="border:1px solid #ccc">
+    <form action="sucessSignUp.php">
         <div class="container">
             <h1>Welcome to Mint Auto Repair</h1>
             <h2>We are excited to work with you.</h2>
