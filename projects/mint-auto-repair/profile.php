@@ -24,10 +24,12 @@
             <div class="card-body">
                 <?php 
                 
-                $sql = "SELECT a.appointment_id, a.appointment_date, a.appointment_time, a.appointmet_type, v.vehicle_make, v.vehicle_model, c.customer_name, e.employee_name, es.employee_name FROM appointment a 
-                JOIN vehicle v ON a.appointment_vehicle_id = v.vehicle_id  
-                JOIN employees e ON a.appointment_working_tech_id = e.employee_id
-                JOIN employees es ON a.service_advisor_id = es.employee_id
+                $sql = "SELECT a.appointment_id, a.appointment_date, a.appointment_time, a.appointmet_type, v.vehicle_make, v.vehicle_model, e.employee_name, es.employee_name 
+                FROM appointment a 
+                    JOIN vehicle v ON a.appointment_vehicle_id = v.vehicle_id  
+                    JOIN customer c ON a.appointment_customer_id = c.customer_id 
+                    JOIN employees e ON a.appointment_working_tech_id = e.employee_id
+                    JOIN employees es ON a.service_advisor_id = es.employee_id
                 WHERE c.customer_name = '".$_SESSION["name"]."'";
 
                 $sth = $db->query($sql);
