@@ -17,7 +17,7 @@ function checkIfPassed(id) {
     console.log(dateArr);
     console.log(d.getDate() - 1);
     var lastDate = d.getDate() - 1;
-    if (dateArr[2] < lastDate) {
+    if (dateArr[2] < lastDate + 1) {
         alert ("Please Select a day that is after the " + lastDate);
     }
 }
