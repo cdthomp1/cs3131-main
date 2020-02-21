@@ -24,14 +24,21 @@
             <div class="card-body">
                 <?php 
                 
-                $sql = "SELECT * FROM appointment WHERE appointment_id=1";
+                $sql = "SELECT a.appointment_id, a.appointment_date, a.appointment_time, a.appointmet_type, v.vehicle_make, v.vehicle_model, c.customer_name, e.employee_name, es.employee_name FROM appointment a 
+                JOIN vehicle v ON a.appointment_vehicle_id = v.vehicle_id 
+                JOIN customer c ON a.appointment_customer_id = c.customer_id 
+                JOIN employees e ON a.appointment_working_tech_id = e.employee_id
+                JOIN employees es ON a.service_advisor_id = es.employee_id
+                WHERE a.appointment_customer_id = 1";
 
                 $sth = $db->query($sql);
 
                 $result = $sth->fetch(PDO::FETCH_ASSOC);
 
-                echo '<h5 class="card-title">'. $result['appointmet_type'].' on '. $result['appointment_date'].' @ '. $result['appointment_time'].'</h5>';
-                echo '<p class="card-text">With '. $result['appointment_working_tech_id']. ' for '. $result['appointment_vehicle_id'] .'. If this is your first appointment, please arrive 30 minutes early to meet with your service advisor, '.$result['service_advisor_id'].' </p>';
+                echo $result;
+
+                /* echo '<h5 class="card-title">'. $result['appointmet_type'].' on '. $result['appointment_date'].' @ '. $result['appointment_time'].'</h5>';
+                echo '<p class="card-text">With '. $result['appointment_working_tech_id']. ' for '. $result['appointment_vehicle_id'] .'. Please arrive 30 minutes early to meet with your service advisor about your service needs. Your advisor is, '.$result['service_advisor_id'].' </p>'; */
                 ?>
                 
             </div>
