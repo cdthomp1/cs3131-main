@@ -2,20 +2,27 @@
 <?php include './dbConnect.php'; ?>
 
 <?php
-  $_SESSION["email"] = $_GET["email"];
-  $_SESSION["name"] = $_GET["name"];
-  $_SESSION["pass"] = $_GET["psw"];
-  $_SESSION["loggedIn"] = true;
+$_SESSION["email"] = $_GET["email"];
+$_SESSION["name"] = $_GET["name"];
+$_SESSION["pass"] = $_GET["psw"];
+$_SESSION["loggedIn"] = true;
 
-  if ($_GET["remember"] == "on") {
-      $_SESSION["rememberMe"] = true;
-  } else {
-    $_SESSION["rememberMe"] = false;
-  }
+if ($_GET["remember"] == "on") {
+  $_SESSION["rememberMe"] = true;
+} else {
+  $_SESSION["rememberMe"] = false;
+}
+$sql = "SELECT * from customer WHERE customer_email ='" . $_SESSION["email"] . "'  limit 1";
 
-  if ($db->query("SELECT * from customer WHERE customer_email ='".$_SESSION["email"] . "'  limit 1")){
-    echo "Someone Has that email";
-  }
+$sth = $db->query($sql);
+$rows = $sth->rowCount();
+
+
+if ($rows == 1) {
+  echo "Someone Has that email";
+} else {
+  echo "GOOD EMAIL!";
+}
 
 /* 
   $singUpUser = $db->prepare('INSERT INTO customer (customer_name, customer_email, customer_password) VALUES (:cname, :email, :psw)');
@@ -23,7 +30,7 @@
   $singUpUser->bindParam(':email', $_SESSION["email"]);
   $singUpUser->bindParam(':psw', $_SESSION["pass"]);
   $executeSuccess = $singUpUser->execute(); */
-  
+
 ?>
 
 
