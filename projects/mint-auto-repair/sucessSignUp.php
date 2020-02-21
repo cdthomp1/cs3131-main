@@ -22,15 +22,11 @@ if ($rows == 1) {
   echo "Someone Has that email";
   $_SESSION["dupEmail"] = true;
   header("Location: user.php");
-} else if (preg_match('/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/', $_SESSION["email"] == '0')) {
+} else if (!filter_var($_SESSION["email"], FILTER_VALIDATE_EMAIL)) {
   $_SESSION["badEmail"] = true;
   header("Location: user.php");
 }
 
-echo "REGEX VALUE" . preg_match('/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/', $_SESSION["email"]);
-
-echo preg_match('/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/', $_SESSION["email"]) == 0;
-echo preg_match('/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/', $_SESSION["email"]) == '0';
 
 /* 
   $singUpUser = $db->prepare('INSERT INTO customer (customer_name, customer_email, customer_password) VALUES (:cname, :email, :psw)');
