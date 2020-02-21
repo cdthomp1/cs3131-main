@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <div class="navBar">
+    <?php echo $_SESSION["loggedIn"];?>
         <div class="companyName"><a href="index.php">Mint Auto Repair</a></div>
         <div class="links_container">
             <div class="links">
