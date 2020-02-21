@@ -17,7 +17,7 @@
 
 <body>
 <div class="navBar">
-            <div class="companyName">Mint Auto Repair</div>
+<div class="companyName"><a href="index.php">Mint Auto Repair</a></div>
             <div class="links_container">
                 <div class="links">
                     <?php
