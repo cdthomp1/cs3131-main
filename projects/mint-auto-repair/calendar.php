@@ -26,10 +26,13 @@
                 $rows = $sth->rowCount();
 
                 if ($rows > 1) {
+                    echo "PASSED IF STATEMENT";
                     foreach($result as $res) {
                         echo $res["appointment_date"];
                     }
                 } else {
+                    echo "FAILED IF STATEMENT";
+
                     echo $result['appointment_date'];                    
                 }
                 ?>
