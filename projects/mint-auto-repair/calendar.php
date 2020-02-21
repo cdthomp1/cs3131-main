@@ -28,7 +28,7 @@
                 if ($rows > 1) {
                     echo "PASSED IF STATEMENT";
                     foreach($result as $res) {
-                        echo $res["appointment_date"];
+                        print_r($res);
                     }
                 } else {
                     echo "FAILED IF STATEMENT";
