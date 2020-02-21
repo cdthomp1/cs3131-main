@@ -42,7 +42,7 @@
             <input type="text" placeholder="Enter Email" name="email" required>
             <?php 
               if ($_SESSION["dupEmail"] == true) {
-                echo '<p class="warn>Email Already Used!</p>';
+                echo '<p class="warn">Email Already Used!</p>';
               }
             ?>
 
