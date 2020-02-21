@@ -43,6 +43,8 @@
             <?php 
               if ($_SESSION["dupEmail"] == true) {
                 echo '<p class="warn">Email Already Used!</p>';
+              } else if($_SESSION["badEmail"] == true) {
+                echo '<p class="warn">Please Enter a Valid Email!</p>';
               }
             ?>
 
