@@ -61,7 +61,9 @@
                 ?>
                 <p id="techChosen"></p>
             </div>
-            <div class="timeChooser"></div>
+            <div class="timeChooser">
+                <?php ?>
+            </div>
             <div class="vehicleChooser"></div>
             <div class="typChooser"></div>
             <div class="createButton"></div>

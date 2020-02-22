@@ -15,6 +15,7 @@ if ($rows == 1) {
   echo '<p>Welcome ' . $result["customer_name"] . "!";
   $_SESSION["email"] = $result["customer_email"];
   $_SESSION["name"] = $result["customer_name"];
+  $_SESSION["userID"] = $result["customer_id"];
   $_SESSION["loggedIn"] = true;
   header("Location: index.php");
 } else {
