@@ -13,7 +13,7 @@ $vehicle = $_SESSION["vehicle"];
 
 $techIdSql = "SELECT employee_id FROM employees where employee_name ='" . $tech ."'";
 
-$sth = $db->query($sql);
+$sth = $db->query($techIdSql);
 
 print_r($sth);
 
