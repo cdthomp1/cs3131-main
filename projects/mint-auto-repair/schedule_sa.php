@@ -18,7 +18,7 @@
 
     ?>
     <form method="post" action="schedule_confirm.php">
-        <label for="tech">Who would you like to be your Service Writer? </label><select id="tech" name="tech">
+        <label for="tech">Who would you like to be your Service Writer? </label><select id="sa" name="sa">
             <?php
             foreach ($db->query("SELECT * FROM employees WHERE employee_position='Service Writer'") as $row) {
                 echo '<option value="' . $row['employee_name'] . '">' . $row['employee_name'] . '</option>';

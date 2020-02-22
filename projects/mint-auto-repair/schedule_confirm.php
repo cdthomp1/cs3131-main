@@ -13,15 +13,20 @@
 <body>
 <?php include './navbar.php'; ?>
   <?php
-  $date = $_GET["date"];
-  $name = $_GET["name"];
-  $time = $_GET["time"];
-  $tech = $_GET["tech"];
-  $typeOf = $_GET["typeOf"];
+      $sa = urldecode($_POST["sa"]);
+      $_SESSION["sa"] = $sa;
+
+  $date = $_SESSION["date"];
+  $name = $_SESSION["name"];
+  $time = $_SESSION["time"];
+  $tech = $_SESSION["tech"];
+  $typeOf = $_SESSION["typeOf"];
+  $vehicle = $_SESSION["vehicle"];
   ?>
 
-  <h2>Congradulations <?php $name ?></h2>
-  <p>You have successfuly created an appointment with <?php echo $tech ?> @ <?php echo $time ?> on <?php echo $date ?> for an <?php echo $typeOf ?>!</p>
+  <h2>Congradulations <?php echo $name ?></h2>
+  <p>Here are your details about your appointment with <?php echo $tech ?> @ <?php echo $time ?> on <?php echo $date ?> for the <?php echo $typeOf ?> on the <?php echo $vehicle?>!</p>
+  <p>Your Service Writer is <?php echo $sa?>. Please arrive 30 minutes early to meet with them.</p>
 </body>
 
 </html>
