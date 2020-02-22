@@ -19,7 +19,7 @@ html {
     margin-top: 75px;
 }
 
-.companyName {
+.companyName a{
     color: #429e9d;
 }
 
