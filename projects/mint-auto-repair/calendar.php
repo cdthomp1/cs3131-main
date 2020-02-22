@@ -52,20 +52,16 @@
             </div>
             <div class="techChooser">
                 <?php
-                if (array_key_exists('confirmDate', $_POST)) {
-                    chooseTech($db);
-                }
 
-                function chooseTech($db) {
-                     echo '<label for="tech">Who would you like to work on your car? </label>';
-                    echo '<select id="tech" name="tech">';
-                    foreach ($db->query("SELECT employee_name FROM employees WHERE employee_position='Technician'") as $row) {
-                        echo '<option value="' . $row['employee_name'] . '">' . $row['employee_name'] . '</option>';
-                    }
-                    echo '</select>';
+                echo '<label for="tech">Who would you like to work on your car? </label>';
+                echo '<select id="tech" name="tech">';
+                foreach ($db->query("SELECT employee_name FROM employees WHERE employee_position='Technician'") as $row) {
+                    echo '<option value="' . $row['employee_name'] . '">' . $row['employee_name'] . '</option>';
                 }
+                echo '</select>';
+
                 ?>
-                
+
             </div>
             <div class="timeChooser"></div>
             <div class="vehicleChooser"></div>
@@ -82,7 +78,7 @@
                             echo '<option value="' . $row['vehicle_id'] . '">' . $row['vehicle_make'] . ' ' . $row['vehicle_model'] . '</option>';
                         }
                     echo '</select>'; -->
-            
+
             <br />
 
             <label for="tech">Who would you like to work on your car? </label><select id="tech" name="tech">

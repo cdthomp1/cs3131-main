@@ -9,6 +9,7 @@ function showDate(id) {
         var dateArr = date.split("-");
         dateField.innerText = "The Date you have chosen is: " + dateArr[1] + "-" + dateArr[2] + "-" + dateArr[0];
         document.getElementById("dateConf").style.display = "block";
+        document.getElementsByClassName("techChooser")[0].style.display = "block";
     }
 
 }
