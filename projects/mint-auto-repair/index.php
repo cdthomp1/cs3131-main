@@ -61,7 +61,7 @@
             <h2>Our Staff</h2>
             <div class="staffContainer">
                 <?php
-                foreach ($db->query('SELECT * FROM employees') as $row) {
+                foreach ($db->query('SELECT * FROM employees ORDER BY employee_id ASC') as $row) {
                     echo '<div class="testi">
                     <img class="profile" src="' . $row['employee_picture'] . '">
                     <div>
