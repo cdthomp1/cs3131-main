@@ -36,7 +36,7 @@
         <?php
         foreach ($times as $time) {
             if (in_array($time, $takenTime)) {
-                echo "<label>This spot is taken</label>";
+                echo "<label>The ". $time . " spot is already taken &#128533;</label><br />";
             } else {
                 echo '<input type="radio" id="' . $time . '" name="time" value="' . $time . '">';
                 echo '<label for="time">' . $time . '</label><br />';
