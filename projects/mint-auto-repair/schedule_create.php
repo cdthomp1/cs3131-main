@@ -33,13 +33,14 @@ $result = $saSql->fetch(PDO::FETCH_ASSOC);
 $saID = $result["employee_id"];
 
 
-echo 'Customer ID: '. $custID;
-echo 'Tech ID: '. $techID;
-echo 'SA ID: '. $saID;
-echo 'Vehicle ID: '. $vechID . '<br />';
-
-if ($typeOf == "Oil Change") {
+if ($typeOf == "Oil Change" || $typeOf == "Tire Rotation" ) {
     $cost = '75';
+} else if ($typeOf == "Brakes" || $typeOf == "Alignment") {
+    $cost = '100';
+} else if ($typeOf == "Coolant Flush") {
+    $cost = "200";
+} else {
+    $cost = "0";
 }
 
 
@@ -58,6 +59,9 @@ $appointmentInsert->bindParam(':dateOf', $date);
 
 $executeSuccess = $appointmentInsert->execute();
 
-echo $executeSuccess;
+
+if ($executeSuccess) {
+    echo "APPOINTMENT MADE SUCCESFULY!";
+}
 
 ?>
