@@ -38,6 +38,10 @@ echo 'Tech ID: '. $techID;
 echo 'SA ID: '. $saID;
 echo 'Vehicle ID: '. $vechID . '<br />';
 
+if ($typeOf == "Oil Change") {
+    $cost = '75';
+}
+
 
 $appointmentInsert = $db->prepare("INSERT INTO appointment
 (appointment_time, appointmet_type, appointment_est_cost, appointment_vehicle_id, appointment_customer_id, appointment_remind_next_apt, appointment_working_tech_id, service_advisor_id, appointment_date)
@@ -45,14 +49,14 @@ VALUES (:timeO, :typeO, :cost, :vehicle, :customer, '06-29-2020', :technitian, :
 
 $appointmentInsert->bindParam(':timeO', $time);
 $appointmentInsert->bindParam(':typeO', $typeOf);
-$appointmentInsert->bindParam(':cost', '300');
+$appointmentInsert->bindParam(':cost', $cost);
 $appointmentInsert->bindParam(':vehicle', $vechID);
 $appointmentInsert->bindParam(':customer', $custID);
 $appointmentInsert->bindParam(':technitian', $techID);
 $appointmentInsert->bindParam(':serviceA', $saID);
 $appointmentInsert->bindParam(':dateOf', $date);
 
-print_rO($appointmentInsert);
+print_r($appointmentInsert);
 
 
 ?>
