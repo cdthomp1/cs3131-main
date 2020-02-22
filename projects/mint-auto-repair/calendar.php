@@ -59,7 +59,7 @@
                 echo '</select>';
 
                 ?>
-
+                <p id="techChosen"></p>
             </div>
             <div class="timeChooser"></div>
             <div class="vehicleChooser"></div>

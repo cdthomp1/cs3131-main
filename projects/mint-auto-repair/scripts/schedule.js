@@ -14,7 +14,9 @@ function showDate(id) {
 }
 
 function displayEmployee() {
-    console.log(document.getElementById('tech').value)
+    var chosenTech = document.getElementById('tech').value;
+    var chosenTechP = document.getElementById('techChosen');
+    chosenTechP.innerText = `Your technician is ${chosenTech}!`
 }
 
 function checkIfPassed(id) {
