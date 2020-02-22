@@ -22,7 +22,7 @@
 
         if ($rows >= 1) {
             echo "what car are we doing today?";
-            echo '<form action="schedule_type.php">';
+            echo '<form method="post" action="schedule_type.php">';
             foreach ($sth as $row) {
                 echo '<input type="radio" id="'. $row['vehicle_make'] . $row['vehicle_model'] .'" name="cust_vehicle" value="' . $row['vehicle_make'] . '%20'. $row['vehicle_model'] .'">';
                 echo '<label for="cust_vehicle">' . $row['vehicle_make'] . ' ' . $row['vehicle_model'] . '</label><br />';
