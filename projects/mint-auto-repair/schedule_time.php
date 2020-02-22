@@ -40,7 +40,7 @@
                     if (in_array($time, $takenTime)) {
                         echo "<p>This spot is taken</p>";
                     } else {
-                        echo '<p>$time</p>';
+                        echo '<p>'.$time.'</p>';
                     }
                 }
     ?>
