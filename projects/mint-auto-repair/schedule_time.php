@@ -26,9 +26,9 @@
                 if ($rows > 1) {
                     echo "PASSED IF STATEMENT";
                     foreach($result as $res) {
-                        echo "<p>" . $res["appointment_date"] . "</p>";
+                        echo "<p>" . $res["appointment_time"] . "</p>";
                     }
-                } else if ($rows == 1) {
+                } else {
                     echo "FAILED IF STATEMENT";
 
                     echo $result['appointment_date'];                    
