@@ -13,7 +13,7 @@
     <?php include './navbar.php'; ?>
     <?php 
         $vehicle = $_POST["cust_vehicle"];
-        echo '<h2>Okay '. $_SESSION["name"] . ', what does your ' . $vehicle . 'need?</h2>'; 
+        echo '<h2>Okay '. $_SESSION["name"] . ', what does your ' . $vehicle . ' need?</h2>'; 
     ?>
 </body>
 </html>
