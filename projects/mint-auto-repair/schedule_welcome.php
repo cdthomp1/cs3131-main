@@ -23,7 +23,7 @@
     if ($rows >= 1) {
         echo "what car are we doing today?";
         foreach ($sth as $row) {
-            echo $row;
+            print_r($row);
         }
     } else {
         echo "We need to add your car in our system.";
