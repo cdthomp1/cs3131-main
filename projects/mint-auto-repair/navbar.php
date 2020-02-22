@@ -7,7 +7,7 @@
                 if ($_SESSION["loggedIn"] != true) {
                     echo '<div class="link"><a href="user.php">Login</a></div>';
                 } else {
-                    echo '<div class="link"><a href="schedule_date.php">Schedule</a></div>';
+                    echo '<div class="link"><a href="schedule_welcome.php">Schedule</a></div>';
                     echo '<div class="link"><a href="profile.php">Profile</a></div>';
                 }
                 ?>
