@@ -7,16 +7,8 @@ function showDate(id) {
         var dateField = document.getElementById("dateChosen");
         var date = id.replace(/([a-z])\w-+/g, "");
         var dateArr = date.split("-");
-        dateField.innerText = "The Date you have chosen is: " + dateArr[1] + "-" + dateArr[2] + "-" + dateArr[0];
-        document.getElementsByClassName("techChooser")[0].style.display = "block";
+        dateField.value = dateArr[1] + "-" + dateArr[2] + "-" + dateArr[0];
     }
-
-}
-
-function displayEmployee() {
-    var chosenTech = document.getElementById('tech').value;
-    var chosenTechP = document.getElementById('techChosen');
-    chosenTechP.innerText = `Your technician is ${chosenTech}!`
 }
 
 function checkIfPassed(id) {
