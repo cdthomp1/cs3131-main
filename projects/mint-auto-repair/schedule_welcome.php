@@ -22,7 +22,7 @@
     
     if ($rows >= 1) {
         echo "what car are we doing today?";
-        foreach ($rows as $row) {
+        foreach ($sth as $row) {
             echo $row;
         }
     } else {
