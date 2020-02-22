@@ -56,7 +56,8 @@ $appointmentInsert->bindParam(':technitian', $techID);
 $appointmentInsert->bindParam(':serviceA', $saID);
 $appointmentInsert->bindParam(':dateOf', $date);
 
-print_r($appointmentInsert);
+$executeSuccess = $appointmentInsert->execute();
 
+echo $executeSuccess;
 
 ?>
