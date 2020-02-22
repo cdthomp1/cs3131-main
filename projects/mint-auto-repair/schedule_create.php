@@ -15,6 +15,7 @@ $techIdSql = "SELECT employee_id FROM employees where employee_name ='" . $tech 
 
 $sth = $db->query($techIdSql);
 
-print_r($sth);
+$result = $sth->fetchAll(PDO::FETCH_ASSOC);
+print_r($result);
 
 ?>
