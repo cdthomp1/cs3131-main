@@ -8,6 +8,7 @@ function showDate(id) {
         var date = id.replace(/([a-z])\w-+/g, "");
         var dateArr = date.split("-");
         dateField.innerText = "The Date you have chosen is: " + dateArr[1] + "-" + dateArr[2] + "-" + dateArr[0];
+        document.getElementById("dateConf").style.display = "block";
     }
 
 }

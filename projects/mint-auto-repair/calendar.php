@@ -46,7 +46,7 @@
                 ?>
                 <p id='dateChosen'></p>
                 <form method="post">
-                    <input type="submit" name="confirmDate" class="confDateButton" value="thisWorks!" />
+                    <input type="submit" name="confirmDate" class="confDateButton" id="dateConf" value="That Works!" />
                 </form>
 
             </div>
@@ -59,9 +59,9 @@
                 function chooseTech($db) {
                      echo '<label for="tech">Who would you like to work on your car? </label>';
                     echo '<select id="tech" name="tech">';
-                        foreach ($db->query("SELECT * FROM vehicle WHERE customer_id=1") as $row) {
-                            echo '<option value="' . $row['vehicle_id'] . '">' . $row['vehicle_make'] . ' ' . $row['vehicle_model'] . '</option>';
-                        }
+                    foreach ($db->query("SELECT employee_name FROM employees WHERE employee_position='Technician'") as $row) {
+                        echo '<option value="' . $row['employee_name'] . '">' . $row['employee_name'] . '</option>';
+                    }
                     echo '</select>';
                 }
                 ?>
@@ -76,7 +76,14 @@
             <label for="date">You would like to create an appointment on: </label><input id="date" type="text" name="date"><br />
             <?php echo '<label for="name">What is your name? </label><input id="name" value="' . $_SESSION["name"] . '" type="text" name="name"></br />' ?>
             <label for="time">What time?</label><input id="time" type="time" name="time"><br />
-            ><br />
+            <!-- echo '<label for="tech">Who would you like to work on your car? </label>';
+                    echo '<select id="tech" name="tech">';
+                        foreach ($db->query("SELECT * FROM vehicle WHERE customer_id=1") as $row) {
+                            echo '<option value="' . $row['vehicle_id'] . '">' . $row['vehicle_make'] . ' ' . $row['vehicle_model'] . '</option>';
+                        }
+                    echo '</select>'; -->
+            
+            <br />
 
             <label for="tech">Who would you like to work on your car? </label><select id="tech" name="tech">
                 <?php

@@ -133,3 +133,7 @@ div.clear {
 .link a:hover {
     color: #32726f;
 }
+
+#dateConf {
+    display: none;
+}
