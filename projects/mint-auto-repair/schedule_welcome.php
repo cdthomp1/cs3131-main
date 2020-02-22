@@ -15,7 +15,7 @@
     <h2>Welcome <?php echo $_SESSION["name"] ?><h3>Mint is excited to work with you and your vehicle. Lets begin.</h3>
 
     <?php 
-    $sqlUser = "SELECT * FROM vehicle WHERE customer_id='" . $_SESSION["userID"] . "'";
+    $sql = "SELECT * FROM vehicle WHERE customer_id='" . $_SESSION["userID"] . "'";
 
     $sth = $db->query($sql);
     $rows = $sth->rowCount();
