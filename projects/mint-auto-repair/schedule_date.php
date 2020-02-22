@@ -12,35 +12,31 @@
 
 <body>
     <?php include './navbar.php'; ?>
-    <?php 
-        $typeOf = urldecode($_POST["typeOf"]);
-        $_SESSION["vehicle"] = $typeOf;
+    <?php
+    $typeOf = urldecode($_POST["typeOf"]);
+    $_SESSION["typeOf"] = $typeOf;
     ?>
-    <div class="wrapper">
-        <div class="scheduleForm">
-                <h2>What day would you like to have your <?php echo $_SESSION["vehicle"]?> recive the <?php echo $typeOf?>?</h2>
-                    <?php
 
-                    ?>
-            </div>
-            <div class="dateChooser">
-                <h3>Please Select a date for your appointment</h3>
-                <?php
-                include 'cal.php';
-                $calendar = new Calendar();
-                echo $calendar->show();
-                ?>
-        
-              
+    <h2>What day would you like to have your <?php echo $_SESSION["vehicle"] ?> recive the <?php echo $typeOf ?>?</h2>
+    <?php
 
-            </div>
-        <form method="post" action="schedule_time.php">
-            <label for="date">You would like to create an appointment on: </label><input id="dateChosen" type="text" name="date"><br>
+    ?>
 
-            <button type="submit" class="continue">Continue</button>
+    <h3>Please Select a date for your appointment</h3>
+    <?php
+    include 'cal.php';
+    $calendar = new Calendar();
+    echo $calendar->show();
+    ?>
 
-        </form>
-    </div>
+
+
+    <form method="post" action="schedule_time.php">
+        <label for="date">You would like to create an appointment on: </label><input id="dateChosen" type="text" name="date"><br>
+
+        <button type="submit" class="continue">Continue</button>
+
+    </form>
 
 
     <script src="scripts/schedule.js"></script>
