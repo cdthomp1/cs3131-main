@@ -43,6 +43,7 @@
             }
         }
         ?>
+        <button type="submit" class="continue">Continue</button>
     </form>
 </body>
 
