@@ -21,30 +21,25 @@
     $sth = $db->query($sql);
     $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-    $rows = $sth->rowCount();
     $times = ['8:00 AM', '8:30 AM', '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM', '1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM'];
     $takenTime = [];
 
-    if ($rows > 1) {
-        echo "PASSED IF STATEMENT";
-        foreach ($result as $res) {
-            array_push($takenTime, $res["appointment_time"]);
-        }
-    } else {
-        echo "FAILED IF STATEMENT";
 
-        echo $result['appointment_date'];
+    foreach ($result as $res) {
+        array_push($takenTime, $res["appointment_time"]);
     }
+
+
     ?>
     <form method="post" action="schedule_tech.php">
 
         <?php
         foreach ($times as $time) {
             if (in_array($time, $takenTime)) {
-                echo "<p>This spot is taken</p>";
+                echo "<label>This spot is taken</label>";
             } else {
-                echo '<input type="radio" id="' . $time .'" name="time" value="'. $time .'">';
-                echo '<label for="time">'. $time .'</label><br />';
+                echo '<input type="radio" id="' . $time . '" name="time" value="' . $time . '">';
+                echo '<label for="time">' . $time . '</label><br />';
             }
         }
         ?>
