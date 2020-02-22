@@ -16,7 +16,7 @@
     $_SESSION["date"] = $date;
 
 
-    $sql = "SELECT appointment_date FROM appointment where appointment_date = '" . $date . "'";
+    $sql = "SELECT appointment_date, appointment_time FROM appointment where appointment_date = '" . $date . "'";
                 
                 $sth = $db->query($sql);
                 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
