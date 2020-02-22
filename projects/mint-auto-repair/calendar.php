@@ -16,9 +16,9 @@
         <div class="scheduleForm">
             <div class="welcome">
                 <h2>Welcome <?php echo $_SESSION["name"] ?><h3>Mint is excited to work with you and your vehicle. Lets begin.</h3>
-                <?php 
-                
-                $sql = "SELECT appointment_date FROM appointment where appointment_date > '2020-03-23'";
+                    <?php
+
+                    /* $sql = "SELECT appointment_date FROM appointment where appointment_date > '2020-03-23'";
                 
                 $sth = $db->query($sql);
                 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -34,8 +34,8 @@
                     echo "FAILED IF STATEMENT";
 
                     echo $result['appointment_date'];                    
-                }
-                ?>
+                } */
+                    ?>
             </div>
             <div class="dateChooser">
                 <h3>Please Select a date for your appointment</h3>
@@ -45,10 +45,30 @@
                 echo $calendar->show();
                 ?>
                 <p id='dateChosen'></p>
+                <form method="post">
+                    <input type="submit" name="confirmDate" class="confDateButton" value="thisWorks!" />
+                </form>
+
+            </div>
+            <div class="techChooser">
+                <?php
+                if (array_key_exists('confirmDate', $_POST)) {
+                    chooseTech($db);
+                }
+
+                function chooseTech($db) {
+                     echo '<label for="tech">Who would you like to work on your car? </label>';
+                    echo '<select id="tech" name="tech">';
+                        foreach ($db->query("SELECT * FROM vehicle WHERE customer_id=1") as $row) {
+                            echo '<option value="' . $row['vehicle_id'] . '">' . $row['vehicle_make'] . ' ' . $row['vehicle_model'] . '</option>';
+                        }
+                    echo '</select>';
+                }
+                ?>
+                
             </div>
             <div class="timeChooser"></div>
             <div class="vehicleChooser"></div>
-            <div class="techChooser"></div>
             <div class="typChooser"></div>
             <div class="createButton"></div>
         </div>
@@ -56,13 +76,7 @@
             <label for="date">You would like to create an appointment on: </label><input id="date" type="text" name="date"><br />
             <?php echo '<label for="name">What is your name? </label><input id="name" value="' . $_SESSION["name"] . '" type="text" name="name"></br />' ?>
             <label for="time">What time?</label><input id="time" type="time" name="time"><br />
-            <label for="tech">Who would you like to work on your car? </label><select id="tech" name="tech">
-                <?php
-                foreach ($db->query("SELECT * FROM vehicle WHERE customer_id=1") as $row) {
-                    echo '<option value="' . $row['vehicle_id'] . '">' . $row['vehicle_make'] . ' ' . $row['vehicle_model'] . '</option>';
-                }
-                ?>
-            </select><br />
+            ><br />
 
             <label for="tech">Who would you like to work on your car? </label><select id="tech" name="tech">
                 <?php
