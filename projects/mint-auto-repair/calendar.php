@@ -52,7 +52,7 @@
                 <?php
 
                 echo '<label for="tech">Who would you like to work on your car? </label>';
-                echo '<select id="tech" name="tech">';
+                echo '<select id="tech" name="tech" onchange="displayEmployee()">';
                 foreach ($db->query("SELECT employee_name FROM employees WHERE employee_position='Technician'") as $row) {
                     echo '<option value="' . $row['employee_name'] . '">' . $row['employee_name'] . '</option>';
                 }

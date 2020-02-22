@@ -13,6 +13,10 @@ function showDate(id) {
 
 }
 
+function displayEmployee() {
+    console.log(document.getElementById('tech').value)
+}
+
 function checkIfPassed(id) {
     var d = new Date();
     var date = id.replace(/([a-z])\w-+/g, "");
