@@ -16,7 +16,7 @@
     $_SESSION["date"] = $date;
 
 
-    $sql = "SELECT appointment_date FROM appointment where appointment_date > '" . $date . "'";
+    $sql = "SELECT appointment_date FROM appointment where appointment_date = '" . $date . "'";
                 
                 $sth = $db->query($sql);
                 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -28,7 +28,7 @@
                     foreach($result as $res) {
                         echo "<p>" . $res["appointment_date"] . "</p>";
                     }
-                } else {
+                } else if ($rows == 1) {
                     echo "FAILED IF STATEMENT";
 
                     echo $result['appointment_date'];                    
