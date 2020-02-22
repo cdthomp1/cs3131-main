@@ -25,7 +25,7 @@
             echo '<form method="post" action="schedule_type.php">';
             foreach ($sth as $row) {
                 echo '<input type="radio" id="'. $row['vehicle_make'] . $row['vehicle_model'] .'" name="cust_vehicle" value="' . $row['vehicle_make'] . $row['vehicle_model'] .'">';
-                echo '<label for="">' . $row['vehicle_make'] . ' ' . $row['vehicle_model'] . '</label>';
+                echo '<label for="cust_vehicle">' . $row['vehicle_make'] . ' ' . $row['vehicle_model'] . '</label><br />';
             }
             echo '<button type="submit" class="continue">Continue</button>';
         } else {
