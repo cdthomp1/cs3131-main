@@ -30,7 +30,7 @@
                     JOIN customer c ON a.appointment_customer_id = c.customer_id 
                     JOIN employees e ON a.appointment_working_tech_id = e.employee_id
                     JOIN employees es ON a.service_advisor_id = es.employee_id
-                WHERE c.customer_name = '" . $_SESSION["name"] . "'";
+                WHERE c.customer_name = '" . $_SESSION["name"] . "' ORDER BY a.appointment_date ASC";
 
                 $sth = $db->query($sql);
 
