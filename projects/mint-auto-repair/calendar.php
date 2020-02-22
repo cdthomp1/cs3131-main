@@ -45,9 +45,7 @@
                 echo $calendar->show();
                 ?>
                 <p id='dateChosen'></p>
-                <form method="post">
-                    <input type="submit" name="confirmDate" class="confDateButton" id="dateConf" value="That Works!" />
-                </form>
+              
 
             </div>
             <div class="techChooser">
