@@ -37,4 +37,9 @@ if ($rows == 1) {
   $singUpUser->bindParam(':psw', $_SESSION["pass"]);
   $executeSuccess = $singUpUser->execute();
 
+  $userID = "SELECT customer_id from customer WHERE customer_email ='" . $_SESSION["email"] . "'  limit 1";
+  $sth = $db->query($sql);
+  $result = $sth->fetch(PDO::FETCH_ASSOC);
+  $userid = $result["customer_id"];
+  $_SESSION["userID"] = $userid;
 ?>
