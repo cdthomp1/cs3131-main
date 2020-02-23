@@ -28,6 +28,9 @@
                 echo '<label for="cust_vehicle">' . $row['vehicle_make'] . ' ' . $row['vehicle_model'] . '</label><br />';
             }
             echo '<button type="submit" class="continue">Continue</button>';
+            ?>
+            <a href="add_car.php" class="continue">Add a New Car!</a>
+            <?php
         } else {
             header("Location: add_car.php");
         }
