@@ -30,7 +30,7 @@
             echo '<button type="submit" class="continue">Continue</button>';
         } else {
             echo "We need to add your car in our system.";
-            echo '<form method="post" action="">';
+            echo '<form method="post" action="create_car.php">';
             echo '<label for="make">Your Cars Make: </label> <input type="text" name="make" placeholder="Ford"><br />';
             echo '<label for="model">Your Cars Model: </label> <input type="text" name="model" placeholder="Ranger"><br />';
             echo '<label for="color">Your Cars Color: </label> <input type="text" name="color" placeholder="Blue"><br />';

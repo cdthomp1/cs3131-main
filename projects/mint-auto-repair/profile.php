@@ -5,7 +5,7 @@
     if ($_SESSION["loggedIn"] == false) {
         header("Location: user.php");
     }
-     ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
