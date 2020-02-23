@@ -104,8 +104,8 @@ h2 {
 
 .boxcontent {
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .boxcontent p {
@@ -121,24 +121,22 @@ h2 {
 
 .about {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    align-items: center;
 }
 
-.aboutImg {
-    width: 50%;
-    background-image: url('../images/aboutImg.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
+
+
+.imgAbout {
+    width: 75%;
 }
 
 .aboutArticle {
-    width: 50%
+    width: 600px;
+    height: 300px;
 }
 
 .aboutArticle h2 {
-    text-align: center;
     font-size: 30px;
 }
 
