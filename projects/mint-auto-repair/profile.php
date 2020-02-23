@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<?php include './navbar.php'; ?>
+    <?php include './navbar.php'; ?>
     <div class="profileContainer">
         <div class="card">
             <div class="card-header">
@@ -35,11 +35,19 @@
                 $sth = $db->query($sql);
 
                 $result = $sth->fetch(PDO::FETCH_ASSOC);
+                $rows = $sth->rowCount();
 
-                echo '<h5 class="card-title">' . $result['appointmet_type'] . ' on ' . $result['appointment_date'] . ' @ ' . $result['appointment_time'] . '</h5>';
-                echo '<p class="card-text">With ' . $result['technician'] . ', your technician, for your ' . $result['vehicle_make'] . ' ' . $result['vehicle_model'] . '. Please arrive 30 minutes early to meet with your service advisor about your service needs. Your advisor is, ' . $result['service_advisor'] . ' </p>';
+                if ($rows > 1) {
+                    echo '<h5 class="card-title">' . $result['appointmet_type'] . ' on ' . $result['appointment_date'] . ' @ ' . $result['appointment_time'] . '</h5>';
+                    echo '<p class="card-text">With ' . $result['technician'] . ', your technician, for your ' . $result['vehicle_make'] . ' ' . $result['vehicle_model'] . '. Please arrive 30 minutes early to meet with your service advisor about your service needs. Your advisor is, ' . $result['service_advisor'] . ' </p>';
+                } else {
                 ?>
-
+                    <h5 class="card-title">No Appointments Yet.</h5>
+                    <p class="card-text">Click on 'Appointments' above to create one!</p>
+                <?php
+                }
+                ?>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
     </div>
