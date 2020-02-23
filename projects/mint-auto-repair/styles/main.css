@@ -66,6 +66,11 @@ h2 {
     color: #61ebe8;
 }
 
+.main h1 {
+    text-align: center;
+}
+
+
 .infoBox {
     background-color: white;
     border-radius: 3px;
