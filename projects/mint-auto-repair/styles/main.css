@@ -125,8 +125,12 @@ h2 {
     justify-content: space-around;
 }
 
-.imgAbout {
-    width: 75%;
+.aboutImg {
+    width: 50%;
+}
+
+.aboutArticle {
+    width: 50%
 }
 
 .aboutArticle h2 {
