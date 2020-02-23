@@ -22,6 +22,12 @@
 
         if ($rows >= 1) {
             echo "what car are we doing today?";
+            
+            if ($_SESSION["carError"] != '') {
+              echo $_SESSION["carError"];
+              $_SESSION["carError"] = '';
+            }
+            
             echo '<form method="post" action="schedule_type.php">';
             foreach ($sth as $row) {
                 echo '<input type="radio" id="' . $row['vehicle_make'] . $row['vehicle_model'] . '" name="cust_vehicle" value="' . $row['vehicle_make'] . '%20' . $row['vehicle_model'] . '">';
