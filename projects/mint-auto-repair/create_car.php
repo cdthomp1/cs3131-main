@@ -20,8 +20,8 @@ $vehicleInstert->bindParam(':vehicle_license_plate', $licPla);
 $vehicleInstert->bindParam(':customer_id', $uID);
 $executeSuccess = $vehicleInstert->execute(); */
 
-
-$_SESSION["vehicle"] = $make . " " . $model;
+$vehicle = $make . " " . $model;
+$_SESSION["vehicle"] = $vehicle;
 
 /* echo $_SESSION["vehicle"];
 if ($executeSuccess) {
