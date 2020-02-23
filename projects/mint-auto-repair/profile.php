@@ -1,6 +1,14 @@
 <?php session_start() ?>
 <?php include './dbConnect.php'; ?>
 
+<?php 
+
+    if(!isset($_SESSION["loggedIn"])) {
+        header("Location: user.php");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +55,9 @@
                 <?php
                 }
                 ?>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <form action="logout.php">
+                    <button class="btn btn-primary">Log Out</button>
+                </form>
             </div>
         </div>
     </div>
