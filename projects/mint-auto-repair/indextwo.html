@@ -1,26 +1,27 @@
-<?php session_start(); ?>
-<?php include './dbConnect.php'; ?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="styles/maintwo.css">
+    <title>Document</title>
 </head>
 
 <body>
-
     <div class="header">
-        <?php include './navbar.php'; ?>
-
+        <div class="navBar">
+            <div class="companyName"><a href="index.html">Mint Auto Repair</a></div>
+            <div class="links_container">
+                <div class="links">
+                    <div class="link"><a href="schedule.html">Appointments</a></div>
+                    <div class="link"><a href="login.html">Login</a></div>
+                </div>
+            </div>
+        </div>
         <img class="headerImage" src="./images/header-image.jpg">
     </div>
-
     <div class="main">
         <h1>What Makes Mint Different?</h1>
         <div class="infoBox">
@@ -61,17 +62,101 @@
         <div class="ourStaff">
             <h2>Our Staff</h2>
             <div class="staffContainer">
-                <?php
-                foreach ($db->query('SELECT * FROM employees ORDER BY employee_id ASC') as $row) {
-                    echo '<div class="testi">
-                    <img class="profile" src="' . $row['employee_picture'] . '">
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
                     <div>
-                        <h2>' . $row['employee_name'] . '</h2>
-                        <h4>' . $row['employee_position'] . '</h4>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
                     </div>
-                </div>';
-                }
-                ?>
+                </div>
+
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
+                    <div>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
+                    <div>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
+                    <div>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
+                    <div>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
+                    <div>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
+                    <div>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
+                    <div>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
+                    <div>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
+                    <div>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
+                    <div>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <img src="https://cdthomp1.github.io/images/blCEO.jpg" alt="profile-sample3" class="profile">
+                    <div>
+                        <h2>Eleanor Crisp</h2>
+                        <h4>Lulu Bella Boutique</h4>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -125,10 +210,14 @@
             </div>
         </div>
     </div>
+    <div class="footer">
+        <div id="copyRight"></div>
+        <div>
+            <p>Scranton, PA</p>
+        </div>
+    </div>
 
-    <?php include './footer.php'; ?>
 
-    <script src="scripts/script.js"></script>
 </body>
 
 </html>

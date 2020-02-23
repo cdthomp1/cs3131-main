@@ -32,6 +32,11 @@
             echo "We need to add your car in our system.";
         }
         ?>
+        <form method="post" action="schedule_type.php">
+        
+
+
+        </form>
 </body>
 
 </html>
