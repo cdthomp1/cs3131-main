@@ -128,10 +128,19 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 300px;
 }
 
+.aboutImg {
+    width: 50%;
+}
 
+.imgAbout{
+    width: 75%;
+}
+
+.aboutArticle {
+    width: 50%;
+}
 
 .aboutArticle p {
     font-size: 23px;

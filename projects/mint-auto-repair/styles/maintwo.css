@@ -112,30 +112,36 @@ html {
     margin: auto;
 }
 
-.about {
+
+
+.about h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.aboutContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
+.aboutImg {
+    width: 50%;
+}
 
-
-.imgAbout {
+.imgAbout{
     width: 75%;
 }
 
 .aboutArticle {
-    width: 600px;
-    height: 300px;
-}
-
-.aboutArticle h2 {
-    font-size: 30px;
+    width: 50%;
 }
 
 .aboutArticle p {
     font-size: 23px;
 }
+
+
 
 .ourStaff {}
 
