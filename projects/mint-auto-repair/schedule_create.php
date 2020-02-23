@@ -62,6 +62,7 @@ $executeSuccess = $appointmentInsert->execute();
 
 if ($executeSuccess) {
     echo "APPOINTMENT MADE SUCCESFULY!";
+    header("Location: profile.php");
 }
 
 ?>
