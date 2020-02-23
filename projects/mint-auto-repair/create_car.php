@@ -21,7 +21,8 @@ $vehicleInstert->bindParam(':customer_id', $uID);
 $executeSuccess = $vehicleInstert->execute();
 
 if ($executeSuccess) {
-    header("Location: schedule_type.php");
+    $_SESSION["vehicle"] = $make . " " . $model;
+     header("Location: schedule_type.php");
 } else {
     $_SESSION["carError"] = '<p class="error">AN ERRORR OCCURED, PLEASE TRY AGAIN!</p>';
     header("Location: add_car.php");
