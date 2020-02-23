@@ -119,7 +119,12 @@ h2 {
     margin: auto;
 }
 
-.about {
+.about h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.aboutContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -127,18 +132,6 @@ h2 {
 }
 
 
-
-.imgAbout {
-    width: 75%;
-}
-
-.aboutArticle {
-    width: 50%;
-}
-
-.aboutArticle h2 {
-    font-size: 30px;
-}
 
 .aboutArticle p {
     font-size: 23px;
