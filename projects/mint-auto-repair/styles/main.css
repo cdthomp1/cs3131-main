@@ -121,7 +121,7 @@ h2 {
 
 .about {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -137,6 +137,7 @@ h2 {
 }
 
 .aboutArticle h2 {
+    text-align: center;
     font-size: 30px;
 }
 
