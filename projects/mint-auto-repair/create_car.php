@@ -10,7 +10,7 @@ $licPla = urldecode($_POST["licPla"]);
 $uID = $_SESSION["userID"];
 
 echo $make . " " . $model . " " . $color . " " . $licPla . " " . $uID;
-/* 
+
 $vehicleInstert = $db->prepare('INSERT INTO vehicle (vehicle_make, vehicle_model, vehicle_color, vehicle_license_plate, customer_id) VALUES (:vehicle_make, :vehicle_model, :vehicle_color, :vehicle_license_plate, :customer_id)');
 
 $vehicleInstert->bindParam(':vehicle_make', $make);
@@ -18,19 +18,17 @@ $vehicleInstert->bindParam(':vehicle_model', $model);
 $vehicleInstert->bindParam(':vehicle_color', $color);
 $vehicleInstert->bindParam(':vehicle_license_plate', $licPla);
 $vehicleInstert->bindParam(':customer_id', $uID);
-$executeSuccess = $vehicleInstert->execute(); */
+$executeSuccess = $vehicleInstert->execute();
 
 $vehicle = $make . " " . $model;
 $_SESSION["vehicle"] = $vehicle;
 
-echo $_SESSION["vehicle"];
-/* echo $_SESSION["vehicle"];
 if ($executeSuccess) {
      header("Location: schedule_type.php");
 } else {
     $_SESSION["carError"] = '<p class="error">AN ERRORR OCCURED, PLEASE TRY AGAIN!</p>';
     header("Location: add_car.php");
-} */
+}
 
 
 ?>
