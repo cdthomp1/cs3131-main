@@ -10,12 +10,12 @@
 </head>
 
 <body>
-    <div class="container">
     <?php include './navbar.php'; ?>
     <?php
     $vehicle = urldecode($_POST["cust_vehicle"]);
     $_SESSION["vehicle"] = $vehicle;
     
+   echo '<div class="container">';
     echo '<h2>Okay ' . $_SESSION["name"] . ', what does your ' . $vehicle . ' need?</h2>';
     ?>
     <form method="post" action="schedule_date.php">
