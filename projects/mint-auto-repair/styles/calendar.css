@@ -123,15 +123,15 @@ div.clear {
 
 .companyName a{
     text-decoration: none;
-    color: #429e9d;
+    color: #ffffff;
   }
 
 .link a {
-    color: #429e9d;
+    color: #ffffff;
 }
 
 .link a:hover {
-    color: #32726f;
+    color: #61ebe8;
 }
 
 #dateConf {

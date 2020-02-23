@@ -53,7 +53,7 @@
             </label>
             <br>
             <label>
-                <input type="checkbox" name="remember" style="margin-bottom:15px"> You Agree to Our <a href="#" class="terms">Terms & Privacy</a>.
+                <input type="checkbox" name="remember" style="margin-bottom:15px" required> You Agree to Our <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target='_blank' class="terms">Terms & Privacy</a>.
             </label>
 
             <div class="clearfix">
