@@ -127,6 +127,9 @@ h2 {
 
 .aboutImg {
     width: 50%;
+    background-image: url('../images/aboutImg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .aboutArticle {
