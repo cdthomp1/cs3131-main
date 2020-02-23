@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/maintwo.css">
     <style>
 
     </style>
@@ -15,48 +16,51 @@
 
 <body>
 
-    <div class="hero-image">
-    <?php include './navbar.php'; ?>
-        <div class="hero-text">
-            <h1 id="title">Welcome to Mint</h1>
-            <p>The freshest service around</p>
-        </div>
+
+    <div class="header">
+        <?php include './navbar.php'; ?>
+        <img class="headerImage" src="./images/header-image.jpg">
+    </div>
+    <div class="main">
+
+        <h1>What Makes Mint Different?</h1>
         <div class="infoBox">
             <div class="box">
-                <div class="boxheader">01</div>
+                <div class="boxheader">Service</div>
                 <div class="boxcontent">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae provident voluptatibus,
-                        optio, sed hic nobis error magni ipsum reprehenderit voluptates laboriosam iusto eaque magnam
-                        vero harum, quo quibusdam quis? Accusamus!</p>
+                    <p>Here at Mint Auto, we take care to service your cars with the help they need! We have an advanced diagnostics program that pin points the real issue. No more beating around the bush to find what is truely wrong!</p>
                 </div>
             </div>
             <div class="box">
-                <div class="boxheader">02</div>
+                <div class="boxheader">Knowledge</div>
                 <div class="boxcontent">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae provident voluptatibus,
-                        optio, sed hic nobis error magni ipsum reprehenderit voluptates laboriosam iusto eaque magnam
-                        vero harum, quo quibusdam quis? Accusamus!</p>
+                    <p>We train our employees to excell in their respective fields. Our Technicians have years of experience. Our Service Managers have taken many courses to know how to best serve you!</p>
                 </div>
             </div>
             <div class="box">
-                <div class="boxheader">03</div>
+                <div class="boxheader">Professional</div>
                 <div class="boxcontent">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae provident voluptatibus,
-                        optio, sed hic nobis error magni ipsum reprehenderit voluptates laboriosam iusto eaque magnam
-                        vero harum, quo quibusdam quis? Accusamus!</p>
+                    <p>Being professional is key. We take care that our employees will not present you with hidden fees or surprise repairs. What you set up with your service advisor is what you will get. We respect you!</p>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="main">
         <div class="about">
             <div class="aboutImg"><img class="imgAbout" src="images/aboutImg.jpg"></div>
             <div class="aboutArticle">
-                <h2>About Us</h2>
-                <p>Hit the road in your dependable car that get you where you’re going with no worries. Mint Auto Repair has provided Scranton, PA residents with comprehensive auto repairs since 1997. For personalized service and repairs from the experts, now ready to serve your car with premium auto care. We can do everything from suspension repairs to diagnostics. Rely on us when you need any general auto service.</p>
+                <div class="aboutHeader">
+                    <h2>About Us</h2>
+                    <p>Hit the road in your dependable car that get you where you’re going with no worries. Mint Auto
+                        Repair
+                        has provided Scranton, PA residents with comprehensive auto repairs since 1997. For personalized
+                        service and repairs from the experts, now ready to serve your car with premium auto care. We can
+                        do
+                        everything from suspension repairs to diagnostics. Rely on us when you need any general auto
+                        service.</p>
+                </div>
             </div>
         </div>
+
+
         <div class="ourStaff">
             <h2>Our Staff</h2>
             <div class="staffContainer">
@@ -112,11 +116,10 @@
                     </div>
                 </div>
             </div>
-            <?php include './footer.php'; ?>
         </div>
-    </div>
+        <?php include './footer.php'; ?>
 
-    <script src="scripts/script.js"></script>
+        <script src="scripts/script.js"></script>
 </body>
 
 </html>
