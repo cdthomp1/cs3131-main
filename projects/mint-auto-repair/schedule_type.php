@@ -26,7 +26,7 @@
             <option value="Alignment">Alignment</option>
             <option value="Coolant Flush">Coolant Flush</option>
             <option value="Wash">Wash</option>
-        </select>
+        </select><br />
         <button type="submit" class="continue">Continue</button>
     </form>
     </div>

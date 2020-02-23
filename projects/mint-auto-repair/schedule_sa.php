@@ -17,6 +17,7 @@
     $_SESSION["tech"] = $tech;
 
     ?>
+    <div class="container">
     <form method="post" action="schedule_confirm.php">
         <label for="tech">Who would you like to be your Service Writer? </label><select id="sa" name="sa">
             <?php
@@ -24,9 +25,10 @@
                 echo '<option value="' . $row['employee_name'] . '">' . $row['employee_name'] . '</option>';
             }
             ?>
-        </select>
+        </select><br />
         <button type="submit" class="continue">Continue</button>
     </form>
+    </div>
 </body>
 
 </html>

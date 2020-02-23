@@ -26,12 +26,13 @@
   $typeOf = $_SESSION["typeOf"];
   $vehicle = $_SESSION["vehicle"];
   ?>
+  <div class="container">
+    <h2><?php echo $name ?></h2>
+    <p>Here are your details about your appointment with <?php echo $tech ?> @ <?php echo $time ?> on <?php echo $date ?> for the <?php echo $typeOf ?> on the <?php echo $vehicle ?>!</p>
+    <p>Your Service Writer is <?php echo $sa ?>. Please arrive 30 minutes early to meet with them.</p>
 
-  <h2><?php echo $name ?></h2>
-  <p>Here are your details about your appointment with <?php echo $tech ?> @ <?php echo $time ?> on <?php echo $date ?> for the <?php echo $typeOf ?> on the <?php echo $vehicle ?>!</p>
-  <p>Your Service Writer is <?php echo $sa ?>. Please arrive 30 minutes early to meet with them.</p>
-
-  <a href="schedule_create.php">Looks Great! Create my appointment!</a>
+    <a href="schedule_create.php" class="continue">Looks Great! Create my appointment!</a>
+  </div>
 </body>
 
 </html>
