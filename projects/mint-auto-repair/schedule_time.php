@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div class="container">
     <?php include './navbar.php'; ?>
     <?php
     $date = urldecode($_POST["date"]);
@@ -45,6 +46,7 @@
         ?>
         <button type="submit" class="continue">Continue</button>
     </form>
+    </div>
 </body>
 
 </html>

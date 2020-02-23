@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div class="container">
     <?php include './navbar.php'; ?>
     <?php
     $vehicle = urldecode($_POST["cust_vehicle"]);
@@ -28,6 +29,7 @@
         </select>
         <button type="submit" class="continue">Continue</button>
     </form>
+    </div>
 </body>
 
 </html>

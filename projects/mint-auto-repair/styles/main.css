@@ -252,6 +252,13 @@ h2 {
     cursor: pointer;
 }
 
+.contaier {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
 @media screen and (max-width: 450px) {
 
     html,
