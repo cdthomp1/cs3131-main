@@ -1,7 +1,11 @@
 <?php session_start() ?>
 <?php include './dbConnect.php'; ?>
 
-<?php include './isloggedin.php'; ?>
+<?php if(isset($_SESSION["loggedIn"])) {
+    if ($_SESSION["loggedIn"] == false) {
+        header("Location: user.php");
+    }
+} ?>
 
 <!DOCTYPE html>
 <html lang="en">
