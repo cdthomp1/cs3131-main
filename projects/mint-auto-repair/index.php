@@ -48,6 +48,8 @@
             <div class="aboutArticle">
                 <div class="aboutHeader">
                     <h2>About Us</h2>
+                </div>
+                <div>
                     <p>Hit the road in your dependable car that get you where you’re going with no worries. Mint Auto
                         Repair
                         has provided Scranton, PA residents with comprehensive auto repairs since 1997. For personalized
@@ -58,64 +60,65 @@
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <div class="ourStaff">
-            <h2>Our Staff</h2>
-            <div class="staffContainer">
-                <?php
-                foreach ($db->query('SELECT * FROM employees ORDER BY employee_id ASC') as $row) {
-                    echo '<div class="testi">
+    <div class="ourStaff">
+        <h2>Our Staff</h2>
+        <div class="staffContainer">
+            <?php
+            foreach ($db->query('SELECT * FROM employees ORDER BY employee_id ASC') as $row) {
+                echo '<div class="testi">
                     <img class="profile" src="' . $row['employee_picture'] . '">
                     <div>
                         <h2>' . $row['employee_name'] . '</h2>
                         <h4>' . $row['employee_position'] . '</h4>
                     </div>
                 </div>';
-                }
-                ?>
+            }
+            ?>
+        </div>
+        <div class="clientReviews">
+            <div class="clientReviewHeader">
+                <h2>Client Reviews</h2>
             </div>
-            <div class="clientReviews">
-                <div class="clientReviewHeader">
-                    <h2>Client Reviews</h2>
+            <div class="clientReviewContainer">
+                <div class="review">
+                    <div>
+                        <h2>Sammy Johnson</h2>
+                        <span style="color: rgb(191, 138, 3)">★★★★★</span>
+                        <p>We have had our cars fixed here several times. The price is always comparable and well done!
+                            This last time, they fixed my hudbands clutch, but after driving it home he noticed it still
+                            wasn’t 100%. They took the car and will fix it again, they warranty their services
+                            thankfully. A frustrating situation but the customer service was great! We will continue to
+                            use them for our car needs!</p>
+                    </div>
                 </div>
-                <div class="clientReviewContainer">
-                    <div class="review">
-                        <div>
-                            <h2>Sammy Johnson</h2>
-                            <span style="color: rgb(191, 138, 3)">★★★★★</span>
-                            <p>We have had our cars fixed here several times. The price is always comparable and well done!
-                                This last time, they fixed my hudbands clutch, but after driving it home he noticed it still
-                                wasn’t 100%. They took the car and will fix it again, they warranty their services
-                                thankfully. A frustrating situation but the customer service was great! We will continue to
-                                use them for our car needs!</p>
-                        </div>
+                <div class="review">
+                    <div>
+                        <h2>Sammy Johnson</h2>
+                        <span style="color: rgb(191, 138, 3)">★★★★★</span>
+                        <p>We have had our cars fixed here several times. The price is always comparable and well done!
+                            This last time, they fixed my hudbands clutch, but after driving it home he noticed it still
+                            wasn’t 100%. They took the car and will fix it again, they warranty their services
+                            thankfully. A frustrating situation but the customer service was great! We will continue to
+                            use them for our car needs!</p>
                     </div>
-                    <div class="review">
-                        <div>
-                            <h2>Sammy Johnson</h2>
-                            <span style="color: rgb(191, 138, 3)">★★★★★</span>
-                            <p>We have had our cars fixed here several times. The price is always comparable and well done!
-                                This last time, they fixed my hudbands clutch, but after driving it home he noticed it still
-                                wasn’t 100%. They took the car and will fix it again, they warranty their services
-                                thankfully. A frustrating situation but the customer service was great! We will continue to
-                                use them for our car needs!</p>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div>
-                            <h2>Sammy Johnson</h2>
-                            <span style="color: rgb(191, 138, 3)">★★★★★</span>
-                            <p>We have had our cars fixed here several times. The price is always comparable and well done!
-                                This last time, they fixed my hudbands clutch, but after driving it home he noticed it still
-                                wasn’t 100%. They took the car and will fix it again, they warranty their services
-                                thankfully. A frustrating situation but the customer service was great! We will continue to
-                                use them for our car needs!</p>
-                        </div>
+                </div>
+                <div class="review">
+                    <div>
+                        <h2>Sammy Johnson</h2>
+                        <span style="color: rgb(191, 138, 3)">★★★★★</span>
+                        <p>We have had our cars fixed here several times. The price is always comparable and well done!
+                            This last time, they fixed my hudbands clutch, but after driving it home he noticed it still
+                            wasn’t 100%. They took the car and will fix it again, they warranty their services
+                            thankfully. A frustrating situation but the customer service was great! We will continue to
+                            use them for our car needs!</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <?php include './footer.php'; ?>
 
