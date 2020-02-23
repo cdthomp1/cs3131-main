@@ -23,6 +23,7 @@ $executeSuccess = $vehicleInstert->execute(); */
 $vehicle = $make . " " . $model;
 $_SESSION["vehicle"] = $vehicle;
 
+echo $_SESSION["vehicle"];
 /* echo $_SESSION["vehicle"];
 if ($executeSuccess) {
      header("Location: schedule_type.php");
