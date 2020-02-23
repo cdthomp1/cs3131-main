@@ -24,7 +24,7 @@ $vehicle = $make . " " . $model;
 $_SESSION["vehicle"] = $vehicle;
 
 if ($executeSuccess) {
-     header("Location: schedule_type.php");
+     header("Location: schedule_welcome.php");
 } else {
     $_SESSION["carError"] = '<p class="error">AN ERRORR OCCURED, PLEASE TRY AGAIN!</p>';
     header("Location: add_car.php");
