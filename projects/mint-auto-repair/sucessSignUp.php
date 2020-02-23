@@ -26,7 +26,7 @@ if ($rows == 1) {
   $_SESSION["badEmail"] = true;
   header("Location: user.php");
 } else {
-  header("Location: index.php");
+  header("Location: add_car.php");
 }
 
 

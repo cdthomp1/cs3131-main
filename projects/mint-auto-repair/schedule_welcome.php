@@ -29,14 +29,11 @@
             }
             echo '<button type="submit" class="continue">Continue</button>';
         } else {
-            echo "We need to add your car in our system.";
+            header("Location: add_car.php");
         }
         ?>
-        <form method="post" action="schedule_type.php">
-        
 
 
-        </form>
 </body>
 
 </html>
